@@ -17,13 +17,9 @@ enum ROLE {
   Developer = 'Developer'
 }
 
-for (const path in routeFiles) {
-  const val = routeFiles[path].default
+function tranObj(val) {
   const { information, dependencies, subscriptions } = val
-
-  // subscriptions.map(i => role.add(...i.role))
-  allRoutes.push({
-    id: path.split('/').pop().slice(0, -3),
+  return {
     name: information.name,
     children: dependencies.children.map((i) => ({
       name: i.displayName,
@@ -37,12 +33,21 @@ for (const path in routeFiles) {
       name: i.displayName,
       id: i.id
     }))
+  }
+}
+
+for (const path in routeFiles) {
+  // subscriptions.map(i => role.add(...i.role))
+  allRoutes.push({
+    ...tranObj(routeFiles[path].default),
+    id: path.split('/').pop().slice(0, -3)
   })
 }
 console.log(allRoutes)
 const rootApp = []
 const independentApp = []
 const needToDeal = []
+
 allRoutes.forEach(i => {
   if (!i.parent.length) {
     if (i.children.length) {
@@ -54,5 +59,36 @@ allRoutes.forEach(i => {
     needToDeal.push(i)
   }
 })
-console.log({ rootApp, independentApp, needToDeal })
-export { rootApp, independentApp, needToDeal }
+const integrated = []
+
+function matchDependency(item) {
+  if (item.children) {
+    if (item.children.length) {
+      item.children.forEach(ii => {
+        const detail = routeFiles[getFullPath(ii.id)]
+        const defaultVal = detail?.default
+        if (defaultVal) {
+          const res = tranObj(detail?.default)
+          integrated.push({
+            par: item,
+            ...res,
+            category: 'Integration',
+          })
+          if (res.children?.length) {
+            res.children.forEach(matchDependency)
+          }
+        }
+      })
+    }
+  } else {
+    const detail = routeFiles[getFullPath(item.id)]
+    if (detail?.default) {
+      const r = tranObj(detail?.default)
+      console.log(r)
+    }
+  }
+}
+
+rootApp.forEach(matchDependency)
+console.log({ rootApp, independentApp, needToDeal, integrated })
+export { rootApp, independentApp, needToDeal, integrated }
