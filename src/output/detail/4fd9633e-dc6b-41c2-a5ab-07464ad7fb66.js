@@ -1,13 +1,13 @@
 export default {
   "completion": {
-    "percentage": 65,
+    "percentage": 76,
     "ChinaReadiness": 8,
     "EnterpriseGuardrails": 100,
     "businessSupport": 53,
     "dataManagement": 75,
     "dependencies": 100,
     "information": 88,
-    "projects": 0,
+    "projects": 100,
     "robots": 100,
     "sourcing": 60
   },
@@ -62,13 +62,29 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
     "children": []
   },
-  "initiatives": [],
+  "initiatives": [
+    {
+      "id": "114791d1-051b-4cea-b1f6-a85e686389fc",
+      "displayName": "SLA - IEB Affected Capability",
+      "fullName": "SLA - IEB Affected Capability",
+      "tags": [],
+      "lifecycle": null,
+      "subscriptions": [
+        {
+          "displayName": "Eduardo Chagas",
+          "email": "eduardo.chagas@scania.com",
+          "type": "OBSERVER"
+        }
+      ]
+    }
+  ],
   "businessSupport": {
     "functionFit": {
       "businessCriticality": "administrativeService",

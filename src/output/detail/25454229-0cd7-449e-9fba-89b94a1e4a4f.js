@@ -95,7 +95,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -129,8 +130,8 @@ export default {
     "capabilities": [
       {
         "id": "7c5961a3-ffee-4ccc-a135-5148cf9c6378",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Collaboration",
-        "description": "Share information and keep transparency about Scania forecasts and supplier inventory status to gain benefits in supply chain and delivery by adapting to the available knowledge and skill based on real-time or in near real time situation. This also includes manage the situation of orders, shipping and delivery in real-time.",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Planning Collaboration",
+        "description": "The ability to collaborate with suppliers in the demand planning process and ensure information transparency to facilitate proactive way of working.",
         "lifecycle": {
           "asString": "active",
           "phases": [

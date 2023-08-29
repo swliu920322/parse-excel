@@ -1,10 +1,10 @@
 export default {
   "completion": {
-    "percentage": 29,
+    "percentage": 30,
     "ChinaReadiness": 8,
     "EnterpriseGuardrails": 0,
     "businessSupport": 40,
-    "dataManagement": 13,
+    "dataManagement": 25,
     "dependencies": 0,
     "information": 67,
     "projects": 100,
@@ -77,7 +77,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -113,6 +114,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -1118,7 +1124,25 @@ export default {
         "tags": []
       }
     ],
-    "interfaceProvide": []
+    "interfaceProvide": [
+      {
+        "id": "4ce4774e-5c69-40cc-9682-fa95059b3167",
+        "description": "Used within ORP site to enrich vehicle information when a Scania vehicle is added to the inventory manually",
+        "displayName": "Scania Product Individual Information_Vehicle Technical Information [REST]",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2023-08-01"
+            }
+          ]
+        },
+        "tags": [
+          "Maturity Level 1"
+        ]
+      }
+    ]
   },
   "tech": {
     "itComponents": {

@@ -150,7 +150,20 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "33285248-1d70-4336-8408-8fe40fd313a1",
+        "displayName": "ScaniaMaintenance",
+        "description": "System to handle Maintenance plans for trucks, buses, trailers and engines.",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -1277,17 +1290,6 @@ export default {
     "itComponents": {
       "software": [
         {
-          "id": "a9d7f6fb-b3ee-4d74-809d-c096a31ad288",
-          "displayName": "Microsoft .NET Core",
-          "category": "software",
-          "description": null,
-          "type": "ITComponent",
-          "lifecycle": null,
-          "tags": [
-            "China affected"
-          ]
-        },
-        {
           "id": "76bd5c30-2d40-4c9b-a02f-40407d59d4fd",
           "displayName": "Microsoft .NET Framework 4.6.1",
           "category": "software",
@@ -1307,6 +1309,17 @@ export default {
             ]
           },
           "tags": []
+        },
+        {
+          "id": "a9d7f6fb-b3ee-4d74-809d-c096a31ad288",
+          "displayName": "Microsoft Microsoft .NET Core",
+          "category": "software",
+          "description": null,
+          "type": "ITComponent",
+          "lifecycle": null,
+          "tags": [
+            "China affected"
+          ]
         },
         {
           "id": "621fb5e1-d8e5-449f-a8d2-9f10e45d9e1e",

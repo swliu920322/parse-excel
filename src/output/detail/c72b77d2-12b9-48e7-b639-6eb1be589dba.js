@@ -78,7 +78,21 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "07cc7578-e353-45ce-b2c6-90f5d336e2af",
+        "displayName": "SPM Retail",
+        "description": "Parts Logistics Stock Control.",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2",
+          "Target State Commercial"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -158,6 +172,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }

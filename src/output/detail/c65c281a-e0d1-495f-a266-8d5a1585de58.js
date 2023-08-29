@@ -58,7 +58,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -248,6 +249,13 @@ export default {
       }
     ],
     "interfaceProvide": [
+      {
+        "id": "479d2983-aaea-4528-bb0d-4f1d68556a39",
+        "description": null,
+        "displayName": "EXPORTSYS_EXPORT_PROCESS",
+        "lifecycle": null,
+        "tags": []
+      },
       {
         "id": "0a9f4b9c-20bc-4080-917a-016f302d4569",
         "description": null,

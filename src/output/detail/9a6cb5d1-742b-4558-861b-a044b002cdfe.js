@@ -108,7 +108,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -367,6 +368,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -648,26 +654,8 @@ export default {
       },
       {
         "id": "c3c0dc13-e5f2-4410-b087-0ce4c826f255",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Material & Services Procurement / Purchase Ordering",
-        "description": "Eg: \n\nâ€¢ Supplier purchase order/call off (including NAP Ordering, AP Ordering, Tools Ordering, Experimental Parts Ordering)\n\nâ€¢ Supplier delivery scheduling (including Supplier delivery schedule creation, Supplier delivery schedule distribution)",
-        "lifecycle": {
-          "asString": "active",
-          "phases": [
-            {
-              "phase": "active",
-              "startDate": "2018-09-13"
-            }
-          ]
-        },
-        "subscriptions": [],
-        "tags": [
-          "China affected"
-        ]
-      },
-      {
-        "id": "e009835d-88e7-4e09-a0f0-e56faf8bdb84",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Purchase Contract Management",
-        "description": "Legal contract, Commercial contract & Operational contract (Purchase price handling, Purchase Agreement Distribution, Contract lifecycle)",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Material & Services Procurement / Purchase Order Processing",
+        "description": "The ability of processing a requisition into a commercial document. Including Supplier purchase order/call off (incl. NAP Ordering, AP Ordering, Tools Ordering, Experimental Parts Ordering).",
         "lifecycle": {
           "asString": "active",
           "phases": [
@@ -710,6 +698,24 @@ export default {
             {
               "phase": "active",
               "startDate": "2021-06-07"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "China affected"
+        ]
+      },
+      {
+        "id": "e009835d-88e7-4e09-a0f0-e56faf8bdb84",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Supplier Contract Management and Administration",
+        "description": "The ability to manage legal contracts and commercial contracts (Purchase price handling, Purchase Agreement Distribution, Contract life-cycle).",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2018-09-13"
             }
           ]
         },

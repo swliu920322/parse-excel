@@ -1,11 +1,11 @@
 export default {
   "completion": {
-    "percentage": 47,
+    "percentage": 52,
     "ChinaReadiness": 8,
     "EnterpriseGuardrails": 100,
     "businessSupport": 51,
     "dataManagement": 13,
-    "dependencies": 0,
+    "dependencies": 50,
     "information": 88,
     "projects": 100,
     "robots": 0,
@@ -119,6 +119,14 @@ export default {
       "email": "hans.ohrstrom@scania.com",
       "type": "OBSERVER",
       "role": []
+    },
+    {
+      "firstName": "Ola",
+      "lastName": "Appelkvist",
+      "displayName": "Ola Appelkvist",
+      "email": "ola.appelkvist@scania.com",
+      "type": "OBSERVER",
+      "role": []
     }
   ],
   "information": {
@@ -140,11 +148,46 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
-    "children": []
+    "children": [
+      {
+        "id": "a9f8cb64-cfdb-4d81-8146-6f86ca61036c",
+        "activeFrom": "2024-06-28",
+        "activeUntil": null,
+        "description": "Cloud-based ALM(Application Lifecycle Management) solution for cloud and hybrid customers. Cloud ALM is currently being used for IEB for monitoring errorS of SAP CPI and SAP ERP systems and also for monitoring certificate due dates. CALM also sends email notifictaions on errors and also while nearing certificate expiry date.",
+        "displayName": "China Industrial ERP Backbone (IEB) / SAP Cloud ALM China",
+        "type": "Application",
+        "lifecycle": null,
+        "tags": [],
+        "subscriptions": []
+      },
+      {
+        "id": "48548d7a-336a-4c6c-aa57-2fe795923a77",
+        "activeFrom": "2024-06-28",
+        "activeUntil": null,
+        "description": "Cloud based Event mesh is Event broker. This is a part of the cloud PaaS called SAP Business Technology Platform. This allows applications to communicate through asynchronous events. This will be hosted in China region.",
+        "displayName": "China Industrial ERP Backbone (IEB) / SAP Event Mesh China",
+        "type": "Application",
+        "lifecycle": null,
+        "tags": [],
+        "subscriptions": []
+      },
+      {
+        "id": "0b5af2fa-db76-42fb-8383-3cbae79a932d",
+        "activeFrom": "2024-06-28",
+        "activeUntil": null,
+        "description": "SAP Identity Authentication (IAS) is available as a cloud service on SAP Business Technology Platform. This enables all user authentication requirements to be implemented in cloud system landscapes. SAP Cloud Identity Services provide basic capabilities for user authentication and provisioning",
+        "displayName": "China Industrial ERP Backbone (IEB) / SAP IAS China",
+        "type": "Application",
+        "lifecycle": null,
+        "tags": [],
+        "subscriptions": []
+      }
+    ]
   },
   "initiatives": [
     {
@@ -395,8 +438,8 @@ export default {
       },
       {
         "id": "c3c0dc13-e5f2-4410-b087-0ce4c826f255",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Material & Services Procurement / Purchase Ordering",
-        "description": "Eg: \n\nâ€¢ Supplier purchase order/call off (including NAP Ordering, AP Ordering, Tools Ordering, Experimental Parts Ordering)\n\nâ€¢ Supplier delivery scheduling (including Supplier delivery schedule creation, Supplier delivery schedule distribution)",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Material & Services Procurement / Purchase Order Processing",
+        "description": "The ability of processing a requisition into a commercial document. Including Supplier purchase order/call off (incl. NAP Ordering, AP Ordering, Tools Ordering, Experimental Parts Ordering).",
         "lifecycle": {
           "asString": "active",
           "phases": [
@@ -466,24 +509,6 @@ export default {
         ]
       },
       {
-        "id": "e009835d-88e7-4e09-a0f0-e56faf8bdb84",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Purchase Contract Management",
-        "description": "Legal contract, Commercial contract & Operational contract (Purchase price handling, Purchase Agreement Distribution, Contract lifecycle)",
-        "lifecycle": {
-          "asString": "active",
-          "phases": [
-            {
-              "phase": "active",
-              "startDate": "2018-09-13"
-            }
-          ]
-        },
-        "subscriptions": [],
-        "tags": [
-          "China affected"
-        ]
-      },
-      {
         "id": "90d8b906-ab0c-4b95-ba52-d0f85af2a485",
         "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Sourcing Cost Control",
         "description": "Eg: Purchase Cost Engineering, Cost management (incl Evaluate costs of components, Evaluate costs of tooling, Evaluate costs of adjusted quantities, Identify saving potentials, Evaluate costs of technical adjustments)",
@@ -520,15 +545,15 @@ export default {
         ]
       },
       {
-        "id": "7c5961a3-ffee-4ccc-a135-5148cf9c6378",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Collaboration",
-        "description": "Share information and keep transparency about Scania forecasts and supplier inventory status to gain benefits in supply chain and delivery by adapting to the available knowledge and skill based on real-time or in near real time situation. This also includes manage the situation of orders, shipping and delivery in real-time.",
+        "id": "e009835d-88e7-4e09-a0f0-e56faf8bdb84",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Supplier Contract Management and Administration",
+        "description": "The ability to manage legal contracts and commercial contracts (Purchase price handling, Purchase Agreement Distribution, Contract life-cycle).",
         "lifecycle": {
           "asString": "active",
           "phases": [
             {
               "phase": "active",
-              "startDate": "2022-03-21"
+              "startDate": "2018-09-13"
             }
           ]
         },
@@ -540,7 +565,7 @@ export default {
       {
         "id": "d6ecb7bd-d10a-4181-ad64-72e50e106a63",
         "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Lifecycle Management",
-        "description": "Supplier Qualifications, Supplier Registration, Supplier Segmentation, Supplier Offboarding",
+        "description": "The ability to handle and continuously improve the supplier base. This includes Supplier Registration, Supplier On-boarding, Supplier Qualifications, Supplier Off-boarding.",
         "lifecycle": {
           "asString": "active",
           "phases": [
@@ -558,7 +583,25 @@ export default {
       {
         "id": "24d40011-93ad-4aee-b8c4-781a09633470",
         "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Performance Management",
-        "description": "Supplier Performance Evaluation, Supplier Evaluation Measurement, Supplier Progress Monitoring (Risk and Sustainability)",
+        "description": "The ability to evaluate supplier performance through the full life cycle based on TQDCS (Technology, Quality, Delivery, Cost and Sustainability).",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2022-03-21"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "China affected"
+        ]
+      },
+      {
+        "id": "7c5961a3-ffee-4ccc-a135-5148cf9c6378",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Planning Collaboration",
+        "description": "The ability to collaborate with suppliers in the demand planning process and ensure information transparency to facilitate proactive way of working.",
         "lifecycle": {
           "asString": "active",
           "phases": [
@@ -575,8 +618,8 @@ export default {
       },
       {
         "id": "b4ef4b4c-d27c-41b3-a8e2-ffad86b1f703",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Relationships",
-        "description": "Find and contract qualified suppliers based on the ability of sustainable relations and work with continued improvement regarding risk elimination, quality and innovation using the approved processes and tools.",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Relationship Management",
+        "description": "Collaborate and maintain qualified suppliers in line with TQDCS (Technology, Quality, Delivery, Cost and Sustainability) value drivers using sustainable methods. Continuously improve value drivers by working proactively with risk management, cost, quality, sustainability and innovation using approved processes and tools.",
         "lifecycle": {
           "asString": "active",
           "phases": [

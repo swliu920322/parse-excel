@@ -73,7 +73,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [
@@ -84,7 +85,7 @@ export default {
         "type": "Application",
         "tags": [
           "Not China affected",
-          "Maturity Level 4"
+          "Maturity Level 2"
         ],
         "subscriptions": []
       }
@@ -310,6 +311,11 @@ export default {
         {
           "displayName": "Joanna Pochec",
           "email": "joanna.pochec@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
           "type": "OBSERVER"
         }
       ]

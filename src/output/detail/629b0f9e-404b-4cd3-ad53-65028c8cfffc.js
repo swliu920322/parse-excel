@@ -189,6 +189,26 @@ export default {
         ],
         "subscriptions": []
       }
+    ],
+    "successor": [
+      {
+        "id": "18dd9d45-a292-41fc-85e2-aeaa520b3f05",
+        "displayName": "MES",
+        "description": null,
+        "type": "Application",
+        "tags": [],
+        "subscriptions": []
+      },
+      {
+        "id": "7196f648-5cae-4417-b16e-1b3bd2f5874f",
+        "displayName": "SAP",
+        "description": null,
+        "type": "Application",
+        "tags": [
+          "China affected"
+        ],
+        "subscriptions": []
+      }
     ]
   },
   "dependencies": {
@@ -233,6 +253,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

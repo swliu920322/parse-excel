@@ -47,7 +47,44 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "d79d3b98-c0d1-4459-9539-16dbfb79d4be",
+        "displayName": "CRAM",
+        "description": "Supports the Credit Process with Expected Credit Loss information and other related calculations. \nObjective of CRAM Credit Risk & Financial Asset Management is to operationalize Scania Financial Services Accounting process as specified by the IFRS9 - International Accounting Standards Board using an COTS IT Platform SAS 9.4",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Italy",
+          "Maturity Level 2",
+          "ICS External"
+        ],
+        "subscriptions": []
+      },
+      {
+        "id": "90ef3344-c7ef-4c07-9f8f-c1a3dbb92cac",
+        "displayName": "INFUP",
+        "description": "INTRODUCTION FOLLOW UP",
+        "type": "Application",
+        "tags": [
+          "Not China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      },
+      {
+        "id": "ca9e0586-32ad-4ec8-a14b-b69ace0ebc1d",
+        "displayName": "TPMANAGER",
+        "description": "MANAGE FAILURE POINT\r\n",
+        "type": "Application",
+        "tags": [
+          "Not China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [

@@ -97,7 +97,33 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "fd0e35b8-2f2a-4b42-a4a7-1453137e1cba",
+        "displayName": "SWS",
+        "description": "SWS - Scania Workshop Suite (will replace SDP3, WIO and Multi)",
+        "type": "Application",
+        "tags": [
+          "Critical",
+          "PII",
+          "China affected",
+          "Maturity Level 1"
+        ],
+        "subscriptions": []
+      },
+      {
+        "id": "7a283620-ff57-4ba2-a26a-00a1be6cd2c9",
+        "displayName": "WiO",
+        "description": "Tool for technical Information ",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -144,6 +170,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

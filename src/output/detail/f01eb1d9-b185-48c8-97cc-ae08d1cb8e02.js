@@ -73,7 +73,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -101,6 +102,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -403,7 +409,7 @@ export default {
       },
       {
         "id": "b74f09ac-3caa-4287-a07e-161b365300d0",
-        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EM - Modular Solutions / EMC - Regulations & Standards / EMCC - Complete Vehicle & Corporate Standards",
+        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EM - Modular Solutions / EMC - Product Compliance / EMCC - Complete Vehicle & Corporate Standards",
         "usageType": null,
         "description": null,
         "lifecycle": {
@@ -572,6 +578,7 @@ export default {
             ]
           },
           "tags": [
+            "Not China affected",
             "Not available from China"
           ]
         }

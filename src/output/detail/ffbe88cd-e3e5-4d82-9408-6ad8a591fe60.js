@@ -3,7 +3,7 @@ export default {
     "percentage": 78,
     "ChinaReadiness": 51,
     "EnterpriseGuardrails": 100,
-    "businessSupport": 52,
+    "businessSupport": 53,
     "dataManagement": 75,
     "dependencies": 100,
     "information": 92,
@@ -37,16 +37,6 @@ export default {
       "email": "priyanka.nanda@scania.com",
       "type": "OBSERVER",
       "role": []
-    },
-    {
-      "firstName": "Lucas",
-      "lastName": "Guerrero Lasso",
-      "displayName": "Lucas Guerrero Lasso",
-      "email": "lucas.lasso@scania.com",
-      "type": "RESPONSIBLE",
-      "role": [
-        "IT Delivery Responsible"
-      ]
     },
     {
       "firstName": "Nina",
@@ -85,7 +75,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -112,7 +103,7 @@ export default {
         },
         "tags": [
           "China affected",
-          "Maturity Level 2"
+          "Maturity Level 4"
         ],
         "subscriptions": []
       }
@@ -140,6 +131,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -494,7 +490,7 @@ export default {
       {
         "id": "fe23810d-40cd-456a-a9d4-cd726fad19a2",
         "displayName": "Scania - Scania CV AB / P_PL - Production & Logistics / VE - Global Industrial Development / VEI - Industrial IT",
-        "usageType": null,
+        "usageType": "user",
         "description": null,
         "lifecycle": {
           "asString": "active",

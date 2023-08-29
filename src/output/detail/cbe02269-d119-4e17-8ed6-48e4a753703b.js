@@ -72,7 +72,8 @@ export default {
       ]
     },
     "productCategory": "Construction Software / Construction Drawing Management Software",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [

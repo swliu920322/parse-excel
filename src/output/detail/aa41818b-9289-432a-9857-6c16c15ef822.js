@@ -13,49 +13,39 @@ export default {
   },
   "subscriptions": [
     {
-      "firstName": "Paul",
-      "lastName": "van Loo",
-      "displayName": "Paul van Loo",
-      "email": "paul.van.loo@scania.com",
-      "type": "OBSERVER",
-      "role": [
-        "Expert User"
-      ]
-    },
-    {
-      "firstName": null,
-      "lastName": null,
-      "displayName": "sara.hassan@scania.com",
-      "email": "sara.hassan@scania.com",
-      "type": "RESPONSIBLE",
-      "role": [
-        "Product Owner"
-      ]
-    },
-    {
-      "firstName": null,
-      "lastName": null,
-      "displayName": "joachim.sahlin@scania.com",
-      "email": "joachim.sahlin@scania.com",
+      "firstName": "Rong",
+      "lastName": "Fan",
+      "displayName": "Rong Fan",
+      "email": "rong.fan@scania.com",
       "type": "RESPONSIBLE",
       "role": [
         "IT Delivery Responsible"
       ]
     },
     {
-      "firstName": "Maritha",
-      "lastName": "Kvist",
-      "displayName": "Maritha Kvist",
-      "email": "maritha.kvist@scania.com",
-      "type": "OBSERVER",
+      "firstName": "Changlie",
+      "lastName": "Shen",
+      "displayName": "Changlie Shen",
+      "email": "changlie.shen@scania.com",
+      "type": "RESPONSIBLE",
       "role": [
-        "Creator"
+        "IT Delivery Responsible"
+      ]
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Campagnac Pereira",
+      "displayName": "Thomas Campagnac Pereira",
+      "email": "thomas.campagnac.pereira@scania.com",
+      "type": "RESPONSIBLE",
+      "role": [
+        "Information Owner"
       ]
     }
   ],
   "information": {
     "name": "China Tube Cutting Truck",
-    "description": "Tube cutting at MS",
+    "description": "Tube cutting at CMS",
     "lifecycle": {
       "asString": "active",
       "phases": [
@@ -67,7 +57,20 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "8acc8937-99e1-4ad6-80a8-5a3e7388b8b4",
+        "displayName": "Tube Cutting Truck",
+        "description": "Tube cutting at MS",
+        "type": "Application",
+        "tags": [
+          "Not China affected",
+          "Maturity Level 1"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -95,6 +98,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

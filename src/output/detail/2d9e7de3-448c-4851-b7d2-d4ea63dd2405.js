@@ -17,7 +17,8 @@ export default {
     "description": "Quality assuarance of C-code (PCLint and QAC complement each other)\nStatic code analyser. Checking of C-code",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

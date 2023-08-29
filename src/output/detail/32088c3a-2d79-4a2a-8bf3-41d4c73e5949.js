@@ -128,7 +128,23 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "c1100a93-d43b-4b3a-838f-515da2f8f051",
+        "displayName": "Common Data Warehouse / INSTO 2.0",
+        "description": "INSTO is a collection of data from a variety of sources received from the Scania Data Lake, organized to provide guidance, intended for follow-up and analysis by different business areas within Scania. That's INSTO and that's a part of driving the shift towards our digitalization journey.\n​​​​​​​\n​​​​​​​By Self-service BI, users can create their own BI-reports in a very easy way.\n\nAll data in INSTO is mirrored and NOT source data. Therefore, there is no service to integrate to INSTO as a system. It is NOT a source system.",
+        "type": "Application",
+        "tags": [
+          "PII",
+          "R&D",
+          "Significant",
+          "Application mapped to level 1 Business Capability, please map to lowest level, i.e. level 3 instead!",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -177,6 +193,11 @@ export default {
         {
           "displayName": "Joanna Pochec",
           "email": "joanna.pochec@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
           "type": "OBSERVER"
         }
       ]

@@ -1,13 +1,13 @@
 export default {
   "completion": {
-    "percentage": 24,
+    "percentage": 13,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 0,
     "businessSupport": 35,
     "dataManagement": 38,
     "dependencies": 0,
     "information": 38,
-    "projects": 100,
+    "projects": 0,
     "robots": 0,
     "sourcing": 10
   },
@@ -47,89 +47,14 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
     "children": []
   },
-  "initiatives": [
-    {
-      "id": "d97db9b8-2bb0-4e07-b081-74232a230032",
-      "displayName": "SAS Industrial Project - China / Powertrain Assembly IT for China",
-      "fullName": "Powertrain Assembly IT for China",
-      "tags": [
-        "China affected",
-        "Maturity Level 2"
-      ],
-      "lifecycle": {
-        "asString": "active",
-        "phases": [
-          {
-            "phase": "active",
-            "startDate": "2022-08-14"
-          }
-        ]
-      },
-      "subscriptions": [
-        {
-          "displayName": "Alexander Wedin",
-          "email": "alexander.wedin@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Jonathan Cartaxo",
-          "email": "jonathan.cartaxo@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Fredrik Blomstedt",
-          "email": "fredrik.blomstedt@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Eddie Löwenborg Forsberg",
-          "email": "eddie.lowenborg.forsberg@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Jacob Rydgård",
-          "email": "jacob.rydgard@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Anders Kardeskog",
-          "email": "anders.kardeskog@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Henrik Bylund",
-          "email": "henrik.bylund@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Joanna Pochec",
-          "email": "joanna.pochec@scania.com",
-          "type": "OBSERVER"
-        },
-        {
-          "displayName": "Claes Boije",
-          "email": "claes.boije@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Marcelo Colovato",
-          "email": "marcelo.colovato@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Burak Gavgacioglu",
-          "email": "burak.gavgacioglu@scania.com",
-          "type": "RESPONSIBLE"
-        }
-      ]
-    }
-  ],
+  "initiatives": [],
   "businessSupport": {
     "functionFit": {
       "businessCriticality": "administrativeService",

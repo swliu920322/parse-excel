@@ -1,15 +1,15 @@
 export default {
   "completion": {
-    "percentage": 37,
+    "percentage": 53,
     "ChinaReadiness": 8,
-    "EnterpriseGuardrails": 0,
-    "businessSupport": 75,
-    "dataManagement": 25,
+    "EnterpriseGuardrails": 100,
+    "businessSupport": 78,
+    "dataManagement": 38,
     "dependencies": 50,
     "information": 67,
     "projects": 100,
     "robots": 0,
-    "sourcing": 7
+    "sourcing": 33
   },
   "subscriptions": [
     {
@@ -122,7 +122,8 @@ export default {
         "tags": [],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -141,6 +142,20 @@ export default {
     ]
   },
   "initiatives": [
+    {
+      "id": "c32bb4ee-6e50-4b11-94b9-08cd1aa4c2f0",
+      "displayName": "PII",
+      "fullName": "PII",
+      "tags": [],
+      "lifecycle": null,
+      "subscriptions": [
+        {
+          "displayName": "Jonathan Sterky",
+          "email": "jonathan.sterky@scania.com",
+          "type": "OBSERVER"
+        }
+      ]
+    },
     {
       "id": "51d37f43-81f7-4f01-9bde-d1281518c3c5",
       "displayName": "SAS Industrial Project - China",
@@ -162,6 +177,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -284,7 +304,21 @@ export default {
       "functionalSuitability": "perfect",
       "iramNecessary": "yes",
       "lifecycle": [
-        null,
+        {
+          "asString": "iramCompleted",
+          "phases": [
+            {
+              "phase": "iramCompleted",
+              "startDate": "2023-08-23",
+              "milestoneId": null
+            },
+            {
+              "phase": "iramReview",
+              "startDate": "2026-08-23",
+              "milestoneId": null
+            }
+          ]
+        },
         null
       ]
     },
@@ -306,12 +340,38 @@ export default {
         "tags": [
           "China affected"
         ]
+      },
+      {
+        "id": "474fd25a-3550-41be-be43-591d2d4cbb62",
+        "displayName": "L. Provide Customer Experience, Services and Continuous Optimization / Product Repair, Maintenance and Updating / Product Individual Management",
+        "description": "Eg: Product individual information reading or Product individual information update",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2018-09-13"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "China affected"
+        ]
       }
     ],
     "processes": [
       {
         "id": "1a205f98-1471-47e2-87fb-fce14d936844",
         "displayName": "Product development / R&D Process / Embedded System process / 11 Update",
+        "description": null,
+        "lifecycle": null,
+        "subscriptions": [],
+        "tags": []
+      },
+      {
+        "id": "d8cf70bf-56c8-46d9-8ccb-b92d8ba9a142",
+        "displayName": "Services delivery / Vehicle service information process",
         "description": null,
         "lifecycle": null,
         "subscriptions": [],
@@ -360,7 +420,25 @@ export default {
     ]
   },
   "management": {
-    "objects": [],
+    "objects": [
+      {
+        "id": "06025653-bf3f-4fcb-933a-fad0c7472672",
+        "description": "Product As Individual domain represents all real world manufactured product as designed models, i.e. ordered, delivered and maintained trucks, buses and coaches and Scania engines that can be part in the active fleet at some customer site.",
+        "displayName": "Individual Vehicle and Engine Domain / Product As Individual Entity",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2021-10-04"
+            }
+          ]
+        },
+        "tags": [
+          "CIM (Common Information Model)"
+        ]
+      }
+    ],
     "interfaceConsume": [
       {
         "id": "faac3a04-e4d3-40ea-b28e-a2a475eddeb5",
@@ -526,7 +604,80 @@ export default {
   "tech": {
     "itComponents": {
       "software": [],
-      "service": [],
+      "service": [
+        {
+          "id": "d2d7c316-d43b-42dc-b366-136ee04d8bb8",
+          "displayName": "Amazon.com / AWS Amazon S3",
+          "category": "service",
+          "description": "Amazon S3 or Amazon Simple Storage Service is a service offered by Amazon Web Services (AWS) that provides object storage through a web service interface. Amazon S3 uses the same scalable storage infrastructure that Amazon.com uses to run its global e-commerce network.",
+          "type": "ITComponent",
+          "lifecycle": {
+            "asString": "active",
+            "phases": [
+              {
+                "phase": "active",
+                "startDate": "2006-03-14"
+              }
+            ]
+          },
+          "tags": [
+            "China affected"
+          ]
+        },
+        {
+          "id": "dde9e896-bc6f-4e90-8e12-36e633b47505",
+          "displayName": "Amazon.com / AWS DynamoDB",
+          "category": "service",
+          "description": "DynamoDB is a fast and flexible nonrelational database service for any scale. DynamoDB enables customers to offload the administrative burdens of operating and scaling distributed databases to AWS so that they don’t have to worry about hardware provisioning, setup and configuration, throughput capacity planning, replication, software patching, or cluster scaling.",
+          "type": "ITComponent",
+          "lifecycle": {
+            "asString": "active",
+            "phases": [
+              {
+                "phase": "active",
+                "startDate": "2012-01-18"
+              }
+            ]
+          },
+          "tags": [
+            "China affected"
+          ]
+        },
+        {
+          "id": "c147a7d4-784e-467f-9419-e99e8bf66774",
+          "displayName": "Amazon.com / AWS Lambda",
+          "category": "service",
+          "description": "AWS Lambda allows developers to run code for virtually any application or backend service without provisioning or managing servers. With AWS Lambda, users can run code for virtually any type of application or backend service - all with zero administration. AWS Lambda runs its code on a high-availability compute infrastructure and performs all of the administration of the compute resources, including server and operating system maintenance, capacity provisioning and automatic scaling, code monitoring, and logging. ",
+          "type": "ITComponent",
+          "lifecycle": {
+            "asString": "active",
+            "phases": [
+              {
+                "phase": "phaseIn",
+                "startDate": "2014-11-13"
+              },
+              {
+                "phase": "active",
+                "startDate": "2015-04-15"
+              }
+            ]
+          },
+          "tags": [
+            "China affected"
+          ]
+        },
+        {
+          "id": "3c507f0c-e2ae-43f0-9148-72531f87035f",
+          "displayName": "Amazon.com / AWS WAF",
+          "category": "service",
+          "description": null,
+          "type": "ITComponent",
+          "lifecycle": null,
+          "tags": [
+            "China affected"
+          ]
+        }
+      ],
       "accessControl": []
     },
     "ssoProvider": "",

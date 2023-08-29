@@ -19,6 +19,14 @@ export default {
       "email": "alex.jiang@scania.com",
       "type": "RESPONSIBLE",
       "role": []
+    },
+    {
+      "firstName": "Fred",
+      "lastName": "Yang",
+      "displayName": "Fred Yang",
+      "email": "fred.yang@scania.com",
+      "type": "RESPONSIBLE",
+      "role": []
     }
   ],
   "information": {
@@ -45,7 +53,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

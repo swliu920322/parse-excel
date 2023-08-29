@@ -45,7 +45,8 @@ export default {
       ]
     },
     "productCategory": "Embedded SW development",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

@@ -102,7 +102,20 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "33285248-1d70-4336-8408-8fe40fd313a1",
+        "displayName": "ScaniaMaintenance",
+        "description": "System to handle Maintenance plans for trucks, buses, trailers and engines.",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [

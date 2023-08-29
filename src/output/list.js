@@ -98,8 +98,8 @@ export default [
   {
     "id": "27e3d56a-535d-4d40-98c1-b6896ce14b29",
     "displayName": "ADC",
-    "percentage": 20,
-    "updatedAt": "2023-06-27T01:54:14.200884Z",
+    "percentage": 9,
+    "updatedAt": "2023-08-25T11:28:08.870986424Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -148,7 +148,7 @@ export default [
     "id": "74ec9955-238c-4fb3-ab3a-fdc5f000c620",
     "displayName": "AGDA",
     "percentage": 84,
-    "updatedAt": "2023-06-26T12:42:32.118236Z",
+    "updatedAt": "2023-08-22T15:18:12.034862772Z",
     "tags": [
       "China affected",
       "Maturity Level 4"
@@ -160,7 +160,7 @@ export default [
     "id": "b9ca5d9a-eba2-4967-8bc3-7088f6eed8c7",
     "displayName": "ALTO",
     "percentage": 90,
-    "updatedAt": "2023-07-05T13:37:19.964019994Z",
+    "updatedAt": "2023-08-22T15:14:08.230212658Z",
     "tags": [
       "China affected",
       "A good example",
@@ -200,12 +200,12 @@ export default [
     "id": "f306c1f6-1314-4844-a140-77e0f913b94b",
     "displayName": "API Management (APIM) - China",
     "percentage": 31,
-    "updatedAt": "2023-07-10T06:45:20.639863Z",
+    "updatedAt": "2023-08-28T09:39:58.402530359Z",
     "tags": [
       "Significant",
       "China affected",
       "Application mapped to level 1 Business Capability, please map to lowest level, i.e. level 3 instead!",
-      "Maturity Level 2"
+      "Maturity Level 3"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -337,8 +337,8 @@ export default [
   {
     "id": "f82d71e3-78d2-46e8-a3fd-599c54f95f01",
     "displayName": "Benify",
-    "percentage": 24,
-    "updatedAt": "2023-06-26T01:51:03.061645Z",
+    "percentage": 13,
+    "updatedAt": "2023-08-25T11:21:34.125690172Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -485,7 +485,7 @@ export default [
     "id": "a60869c5-696f-43aa-beb1-72ec53359490",
     "displayName": "CAVA",
     "percentage": 40,
-    "updatedAt": "2023-07-05T11:58:03.693136573Z",
+    "updatedAt": "2023-08-18T12:42:43.415290101Z",
     "tags": [
       "PII",
       "R&D",
@@ -584,8 +584,8 @@ export default [
   {
     "id": "ca90e11f-ba4d-4490-a62c-08f8a4287f4a",
     "displayName": "China Industrial ERP Backbone (IEB)",
-    "percentage": 47,
-    "updatedAt": "2023-07-19T14:05:40.920113Z",
+    "percentage": 52,
+    "updatedAt": "2023-08-29T06:18:45.566989690Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -594,10 +594,21 @@ export default [
     "status": "ACTIVE"
   },
   {
+    "id": "ef3b7d57-adc0-462a-88c2-22884a09bf4d",
+    "displayName": "China SAP Cloud Integration",
+    "percentage": 6,
+    "updatedAt": "2023-08-24T09:02:40.638817829Z",
+    "tags": [
+      "China affected"
+    ],
+    "level": 1,
+    "status": "ACTIVE"
+  },
+  {
     "id": "aa41818b-9289-432a-9857-6c16c15ef822",
     "displayName": "China Tube Cutting Truck",
     "percentage": 28,
-    "updatedAt": "2023-06-26T06:03:08.224669Z",
+    "updatedAt": "2023-08-28T08:56:05.486776440Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -708,10 +719,11 @@ export default [
   {
     "id": "ec6d2260-7977-492f-b3f4-a187c2aca1d0",
     "displayName": "COLO",
-    "percentage": 9,
-    "updatedAt": "2023-08-15T11:32:06.877516037Z",
+    "percentage": 79,
+    "updatedAt": "2023-08-21T10:39:29.310642578Z",
     "tags": [
-      "China affected"
+      "China affected",
+      "Maturity Level 2"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -720,7 +732,7 @@ export default [
     "id": "b003548e-e1b4-41d0-9cf2-192f8cb5f98b",
     "displayName": "COLO / COLO - CDE",
     "percentage": 20,
-    "updatedAt": "2023-08-15T11:32:15.108257288Z",
+    "updatedAt": "2023-08-18T08:14:56.079429394Z",
     "tags": [
       "China affected"
     ],
@@ -836,10 +848,21 @@ export default [
     "status": "ACTIVE"
   },
   {
+    "id": "b58175e9-cc8a-484c-8f64-afe93dd093b1",
+    "displayName": "Contact Center",
+    "percentage": 6,
+    "updatedAt": "2023-08-22T09:25:14.245238193Z",
+    "tags": [
+      "China affected"
+    ],
+    "level": 1,
+    "status": "ACTIVE"
+  },
+  {
     "id": "60592d0a-b126-46bd-9080-38d311417d68",
     "displayName": "Conversion",
     "percentage": 68,
-    "updatedAt": "2023-08-17T14:43:50.603127843Z",
+    "updatedAt": "2023-08-18T14:24:22.059847932Z",
     "tags": [
       "Critical",
       "PII",
@@ -905,8 +928,36 @@ export default [
     "id": "20990ca7-7dbc-4e65-8410-0302207d2d3b",
     "displayName": "CSDT Artifactory (Jfrog)",
     "percentage": 40,
-    "updatedAt": "2023-07-11T11:28:49.518518517Z",
+    "updatedAt": "2023-08-22T08:49:46.424538194Z",
     "tags": [
+      "R&D",
+      "China affected",
+      "Maturity Level 2"
+    ],
+    "level": 1,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "12b051a6-e1a8-4848-9f5a-8f42724582cd",
+    "displayName": "CSDT Gitlab",
+    "percentage": 37,
+    "updatedAt": "2023-08-22T08:49:04.522181434Z",
+    "tags": [
+      "Critical",
+      "R&D",
+      "China affected",
+      "Maturity Level 2"
+    ],
+    "level": 1,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "772b9624-f321-469d-903b-d632e1f306f1",
+    "displayName": "CSDT Jira",
+    "percentage": 39,
+    "updatedAt": "2023-08-22T08:49:32.510301109Z",
+    "tags": [
+      "R&D",
       "China affected",
       "Maturity Level 2"
     ],
@@ -941,7 +992,7 @@ export default [
     "id": "de229bb8-ee12-4a07-bef9-824bca469368",
     "displayName": "CyberArk China",
     "percentage": 28,
-    "updatedAt": "2023-08-17T06:46:39.185477431Z",
+    "updatedAt": "2023-08-25T13:46:28.435056307Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1012,8 +1063,8 @@ export default [
   {
     "id": "0666aea8-e732-4e97-a4c7-0a7c80507928",
     "displayName": "DIDRIK",
-    "percentage": 81,
-    "updatedAt": "2023-06-07T19:47:54.033450Z",
+    "percentage": 85,
+    "updatedAt": "2023-08-18T08:15:26.477734736Z",
     "tags": [
       "Critical",
       "Manufacturing",
@@ -1027,7 +1078,7 @@ export default [
     "id": "ca42b0b5-c110-4ed1-911a-d896f2425c03",
     "displayName": "DIDRIK / Didrik CMC",
     "percentage": 37,
-    "updatedAt": "2023-07-10T09:44:15.545756656Z",
+    "updatedAt": "2023-08-18T08:15:26.468850831Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1039,7 +1090,7 @@ export default [
     "id": "fb3d3b79-d14d-4817-8d29-46a63b18734d",
     "displayName": "DIDRIK / Didrik CMS",
     "percentage": 37,
-    "updatedAt": "2023-07-10T09:36:30.150379450Z",
+    "updatedAt": "2023-08-18T08:15:26.476708236Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1051,7 +1102,7 @@ export default [
     "id": "6fcf0063-0b1d-4630-8387-ac3638ff4ec8",
     "displayName": "DIDRIK / DIDRIK MC",
     "percentage": 13,
-    "updatedAt": "2023-06-08T12:51:59.469760Z",
+    "updatedAt": "2023-08-18T08:15:26.489185643Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -1062,8 +1113,8 @@ export default [
   {
     "id": "885782b1-6942-4fb0-956d-2bea30040693",
     "displayName": "DIDRIK / DIDRIK TCT",
-    "percentage": 62,
-    "updatedAt": "2023-07-10T13:46:51.229728Z",
+    "percentage": 51,
+    "updatedAt": "2023-08-25T11:26:24.607885358Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1154,10 +1205,11 @@ export default [
   {
     "id": "9453f7f0-d418-44f8-89d7-8d2acf99c88f",
     "displayName": "Draw.io",
-    "percentage": 13,
-    "updatedAt": "2023-07-04T14:39:44.532484060Z",
+    "percentage": 16,
+    "updatedAt": "2023-08-21T16:13:01.639495121Z",
     "tags": [
-      "China affected"
+      "China affected",
+      "Maturity Level 2"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -1190,11 +1242,10 @@ export default [
     "id": "ea8618ef-a606-4eb7-8d96-c29b1c741eff",
     "displayName": "DWO OP MCAS",
     "percentage": 32,
-    "updatedAt": "2023-06-21T19:47:00.629180Z",
+    "updatedAt": "2023-08-22T11:02:58.374670864Z",
     "tags": [
       "China affected",
-      "Application mapped to level 1 Business Capability, please map to lowest level, i.e. level 3 instead!",
-      "Maturity Level 2"
+      "Maturity Level 3"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -1304,8 +1355,8 @@ export default [
   {
     "id": "2f84d6a0-a012-4abd-967f-370efd06c8e6",
     "displayName": "EBBA Parent / EBBA Powertrain Assembly China",
-    "percentage": 62,
-    "updatedAt": "2023-07-07T12:17:47.994081Z",
+    "percentage": 51,
+    "updatedAt": "2023-08-25T11:26:30.630367863Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1367,8 +1418,8 @@ export default [
   {
     "id": "4fd9633e-dc6b-41c2-a5ab-07464ad7fb66",
     "displayName": "ECOFINBR - E&F DEALERS PORTAL",
-    "percentage": 65,
-    "updatedAt": "2023-08-16T13:03:43.121852164Z",
+    "percentage": 76,
+    "updatedAt": "2023-08-18T21:16:19.537411881Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1455,8 +1506,8 @@ export default [
   {
     "id": "3ed0803f-5bdb-42c6-b15d-eaadfeab443c",
     "displayName": "eQ2",
-    "percentage": 83,
-    "updatedAt": "2023-07-13T09:34:20.542739393Z",
+    "percentage": 86,
+    "updatedAt": "2023-08-29T06:07:30.964464497Z",
     "tags": [
       "PII",
       "Significant",
@@ -1628,7 +1679,7 @@ export default [
     "id": "c65c281a-e0d1-495f-a266-8d5a1585de58",
     "displayName": "EXPORTSYS",
     "percentage": 74,
-    "updatedAt": "2023-08-01T16:20:55.602476642Z",
+    "updatedAt": "2023-08-28T20:15:00.028100896Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1639,8 +1690,8 @@ export default [
   {
     "id": "e194ae12-52ed-4164-a990-bc9f4d73d4ed",
     "displayName": "EXS550-0: Gadget",
-    "percentage": 27,
-    "updatedAt": "2023-06-27T06:42:18.096315Z",
+    "percentage": 29,
+    "updatedAt": "2023-08-18T14:13:59.424384939Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -1675,10 +1726,10 @@ export default [
     "id": "71721f7a-8084-474f-b282-bcc71385b2d0",
     "displayName": "Figma",
     "percentage": 79,
-    "updatedAt": "2023-07-11T11:25:23.637735069Z",
+    "updatedAt": "2023-08-25T11:57:09.428821049Z",
     "tags": [
       "China affected",
-      "Maturity Level 2"
+      "Maturity Level 4"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -1734,7 +1785,7 @@ export default [
     "id": "dd1a69f4-8fd2-4269-9ea6-d7224c02533b",
     "displayName": "FRAS (internal)",
     "percentage": 59,
-    "updatedAt": "2023-07-11T11:53:23.149543105Z",
+    "updatedAt": "2023-08-21T15:45:41.420235Z",
     "tags": [
       "PII",
       "Significant",
@@ -1748,7 +1799,7 @@ export default [
     "id": "85248901-cf9f-440a-bc49-0e6dff6e0d8e",
     "displayName": "FRAS (internal) / BBM-QA",
     "percentage": 38,
-    "updatedAt": "2023-06-05T11:10:05.566507Z",
+    "updatedAt": "2023-08-21T15:45:41.420235Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1867,7 +1918,7 @@ export default [
     "id": "d7f6e77d-1b0f-499c-bfc7-01788bbe9f7d",
     "displayName": "GT-POWER",
     "percentage": 26,
-    "updatedAt": "2023-06-28T11:43:59.990008Z",
+    "updatedAt": "2023-08-28T09:12:46.213521416Z",
     "tags": [
       "China affected"
     ],
@@ -1890,7 +1941,7 @@ export default [
     "id": "eb7bfdcb-eeba-488e-82d9-16b9796e00ee",
     "displayName": "HR-Hub",
     "percentage": 75,
-    "updatedAt": "2023-06-27T09:06:57.342047Z",
+    "updatedAt": "2023-08-22T06:04:49.134277025Z",
     "tags": [
       "China affected",
       "Application mapped to level 1 Business Capability, please map to lowest level, i.e. level 3 instead!",
@@ -1941,8 +1992,8 @@ export default [
   {
     "id": "ca2ca48b-f9ff-48fe-b45b-f9178e4a34ec",
     "displayName": "IBM Cognos (TM1) SGB",
-    "percentage": 31,
-    "updatedAt": "2023-06-27T06:42:23.095866Z",
+    "percentage": 32,
+    "updatedAt": "2023-08-18T08:41:27.074335064Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -1980,7 +2031,7 @@ export default [
     "id": "39b9f72a-546b-4228-83d3-bdc48615d20f",
     "displayName": "INCA N/A",
     "percentage": 93,
-    "updatedAt": "2023-08-09T12:34:23.483896969Z",
+    "updatedAt": "2023-08-21T06:55:38.719851389Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -1992,7 +2043,7 @@ export default [
     "id": "0cded523-fdfe-4533-85e6-8a65382dd6fe",
     "displayName": "INCA N/A / ETAS MDA N/A",
     "percentage": 90,
-    "updatedAt": "2023-08-09T12:33:49.069710887Z",
+    "updatedAt": "2023-08-21T06:56:13.957932919Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -2004,7 +2055,7 @@ export default [
     "id": "e0fccd39-ef13-4a9a-ac25-766022d55f42",
     "displayName": "Industrial ERP Backbone (IEB)",
     "percentage": 54,
-    "updatedAt": "2023-06-15T07:57:35.680123Z",
+    "updatedAt": "2023-08-29T06:19:05.865844799Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -2067,6 +2118,28 @@ export default [
     "tags": [
       "China affected",
       "Maturity Level 2"
+    ],
+    "level": 1,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "3b753008-8959-4da9-831f-91cf96b179f4",
+    "displayName": "Java SE Desktop",
+    "percentage": 9,
+    "updatedAt": "2023-08-25T07:23:55.742730492Z",
+    "tags": [
+      "China affected"
+    ],
+    "level": 1,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "4bbad412-6b3e-4c6a-bcb8-f232588a5a4c",
+    "displayName": "Java SE Server",
+    "percentage": 9,
+    "updatedAt": "2023-08-25T07:24:25.742355524Z",
+    "tags": [
+      "China affected"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -2174,8 +2247,9 @@ export default [
     "id": "2f2d17f3-32fe-4a01-bb77-1708f24e4fde",
     "displayName": "Letsign(电子签）",
     "percentage": 78,
-    "updatedAt": "2023-06-27T07:07:53.124912Z",
+    "updatedAt": "2023-08-28T02:44:57.043804011Z",
     "tags": [
+      "Self-Quick Check",
       "China affected",
       "Application mapped to level 1 Business Capability, please map to lowest level, i.e. level 3 instead!"
     ],
@@ -2198,7 +2272,7 @@ export default [
     "id": "5a3b5ff3-163f-4c16-aae4-fd7316d72256",
     "displayName": "LinkedIn Learning",
     "percentage": 64,
-    "updatedAt": "2023-08-16T13:33:34.870378511Z",
+    "updatedAt": "2023-08-22T13:38:21.091525309Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -2270,7 +2344,7 @@ export default [
     "id": "88a8df99-5291-42cf-8515-5462215c6919",
     "displayName": "Marposs Gearbox",
     "percentage": 78,
-    "updatedAt": "2023-07-20T11:47:39.586724335Z",
+    "updatedAt": "2023-08-18T13:31:26.211712778Z",
     "tags": [
       "China affected",
       "Maturity Level 3"
@@ -2401,7 +2475,7 @@ export default [
     "id": "8350f40f-d232-48e5-a0d2-1b13970507df",
     "displayName": "MIC 8.3",
     "percentage": 90,
-    "updatedAt": "2023-08-15T14:04:01.387491784Z",
+    "updatedAt": "2023-08-28T05:55:07.354995617Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -2566,7 +2640,7 @@ export default [
     "id": "e6619811-efac-46d9-8304-da31dc430513",
     "displayName": "My Scania",
     "percentage": 65,
-    "updatedAt": "2023-08-17T11:50:16.139594705Z",
+    "updatedAt": "2023-08-24T03:51:44.683808386Z",
     "tags": [
       "China affected",
       "Maturity Level 2",
@@ -2580,7 +2654,7 @@ export default [
     "id": "5a5dac03-1bbf-4cc4-a19a-5384b54f2130",
     "displayName": "MyCompass",
     "percentage": 68,
-    "updatedAt": "2023-07-31T12:01:48.241149657Z",
+    "updatedAt": "2023-08-23T08:36:52.035190612Z",
     "tags": [
       "China affected",
       "Maturity Level 4"
@@ -2685,7 +2759,7 @@ export default [
     "id": "6ec36679-b99b-40e2-8494-c5f3207ba696",
     "displayName": "Office 365",
     "percentage": 47,
-    "updatedAt": "2023-07-19T11:18:23.565312766Z",
+    "updatedAt": "2023-08-24T12:31:36.514492537Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -2809,10 +2883,10 @@ export default [
     "id": "0a7e8886-49ad-4f5c-87a0-17857f934477",
     "displayName": "OpenLM",
     "percentage": 55,
-    "updatedAt": "2023-07-09T16:39:47.627771794Z",
+    "updatedAt": "2023-08-22T12:28:30.906145885Z",
     "tags": [
       "China affected",
-      "Maturity Level 2"
+      "Maturity Level 4"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -2849,7 +2923,7 @@ export default [
     "id": "14b49223-16f5-417b-afa3-dfbfbddb24ab",
     "displayName": "Oracle Financials (EBS) / eBS_AR",
     "percentage": 59,
-    "updatedAt": "2023-08-08T11:27:24.831798613Z",
+    "updatedAt": "2023-08-28T07:20:04.908518344Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -2986,11 +3060,11 @@ export default [
   {
     "id": "18923b8b-9d71-4ac7-9dbe-85e340421e9e",
     "displayName": "PII",
-    "percentage": 37,
-    "updatedAt": "2023-06-28T01:41:30.748098Z",
+    "percentage": 53,
+    "updatedAt": "2023-08-24T07:02:45.990696876Z",
     "tags": [
       "China affected",
-      "Maturity Level 1"
+      "Maturity Level 2"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -3010,8 +3084,8 @@ export default [
   {
     "id": "a62e9b9f-84c0-41b2-87a8-075afe6460da",
     "displayName": "Polarion",
-    "percentage": 82,
-    "updatedAt": "2023-08-16T13:22:47.568092168Z",
+    "percentage": 88,
+    "updatedAt": "2023-08-25T11:24:26.714409826Z",
     "tags": [
       "R&D",
       "China affected",
@@ -3024,8 +3098,22 @@ export default [
     "id": "d38d7ad5-6828-47b2-9b9d-3ce0eac9a113",
     "displayName": "Polarion / Polarion RMS",
     "percentage": 71,
-    "updatedAt": "2023-07-14T11:52:41.503555505Z",
+    "updatedAt": "2023-08-18T12:03:05.329460767Z",
     "tags": [
+      "R&D",
+      "China affected",
+      "Maturity Level 2"
+    ],
+    "level": 2,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "acb4a4b9-345f-4818-bb66-0cf282de459a",
+    "displayName": "Polarion / Polarion TARA",
+    "percentage": 70,
+    "updatedAt": "2023-08-21T14:15:32.789000263Z",
+    "tags": [
+      "R&D",
       "China affected",
       "Maturity Level 2"
     ],
@@ -3221,13 +3309,25 @@ export default [
   {
     "id": "70d3917f-6b6a-48d7-8d84-340b2ecab85f",
     "displayName": "PROMO / PROMO TCT",
-    "percentage": 62,
-    "updatedAt": "2023-06-26T06:44:24.052497Z",
+    "percentage": 51,
+    "updatedAt": "2023-08-25T11:26:15.463431831Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
     ],
     "level": 2,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "8345395b-4dc3-4881-8c07-cb20dbdca49d",
+    "displayName": "Promote",
+    "percentage": 63,
+    "updatedAt": "2023-08-28T11:39:14.757272729Z",
+    "tags": [
+      "China affected",
+      "Maturity Level 1"
+    ],
+    "level": 1,
     "status": "ACTIVE"
   },
   {
@@ -3399,8 +3499,8 @@ export default [
   {
     "id": "608a5a13-bb16-46ef-805c-e1f280896dfb",
     "displayName": "RIO",
-    "percentage": 1,
-    "updatedAt": "2023-06-14T14:12:54.285878Z",
+    "percentage": 5,
+    "updatedAt": "2023-08-28T08:14:42.987548905Z",
     "tags": [
       "China affected"
     ],
@@ -3411,8 +3511,9 @@ export default [
     "id": "3cb934a2-5fdb-4dcf-82dd-611a1654a60a",
     "displayName": "RobotStudio 2020",
     "percentage": 82,
-    "updatedAt": "2023-06-28T01:54:13.227095Z",
+    "updatedAt": "2023-08-29T01:53:19.232703150Z",
     "tags": [
+      "Self-Quick Check",
       "China affected",
       "Maturity Level 2"
     ],
@@ -3460,7 +3561,7 @@ export default [
     "id": "c3fdce9d-35c5-4371-8842-2db4aeb35b4c",
     "displayName": "SALSA (SAP Spare parts)",
     "percentage": 74,
-    "updatedAt": "2023-05-04T18:07:21.641860Z",
+    "updatedAt": "2023-08-25T18:16:26.361692755Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -3532,7 +3633,7 @@ export default [
     "id": "fcad595e-035f-4a87-a107-5e95231b9104",
     "displayName": "Scania D365 Golden Blueprint",
     "percentage": 74,
-    "updatedAt": "2023-07-19T14:25:37.852509Z",
+    "updatedAt": "2023-08-23T09:18:49.115483Z",
     "tags": [
       "China affected",
       "Maturity Level 2",
@@ -3557,8 +3658,8 @@ export default [
   {
     "id": "f8177631-9cf8-46cb-9876-0f06bd63664b",
     "displayName": "Scania Lexicon",
-    "percentage": 77,
-    "updatedAt": "2023-06-28T09:23:39.496301Z",
+    "percentage": 79,
+    "updatedAt": "2023-08-21T12:13:56.335167626Z",
     "tags": [
       "Critical",
       "PII",
@@ -3583,8 +3684,8 @@ export default [
   {
     "id": "ce6170e7-8f0f-4676-82d4-d504865fdf97",
     "displayName": "Scania Product Individual Information",
-    "percentage": 29,
-    "updatedAt": "2023-08-14T15:02:20.145769Z",
+    "percentage": 30,
+    "updatedAt": "2023-08-21T15:38:22.480262576Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -3655,8 +3756,8 @@ export default [
   {
     "id": "33285248-1d70-4336-8408-8fe40fd313a1",
     "displayName": "ScaniaMaintenance",
-    "percentage": 24,
-    "updatedAt": "2023-07-03T15:37:18.196010Z",
+    "percentage": 26,
+    "updatedAt": "2023-08-21T08:11:28.573846018Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -3667,8 +3768,8 @@ export default [
   {
     "id": "82174e33-0f6b-46a0-96fb-46d2b9160b7c",
     "displayName": "ScaniaNow",
-    "percentage": 69,
-    "updatedAt": "2023-07-30T00:10:50.710975643Z",
+    "percentage": 71,
+    "updatedAt": "2023-08-24T09:24:37.683761526Z",
     "tags": [
       "Significant",
       "China affected",
@@ -3837,8 +3938,8 @@ export default [
   {
     "id": "3a0f0cdd-f3ad-4eef-aed4-0cfa8a56b6ef",
     "displayName": "SGWS Mid-term  (in Cloud)",
-    "percentage": 38,
-    "updatedAt": "2023-06-29T15:21:48.484513Z",
+    "percentage": 39,
+    "updatedAt": "2023-08-18T08:24:36.472038852Z",
     "tags": [
       "China affected"
     ],
@@ -3937,11 +4038,11 @@ export default [
     "id": "977dabbd-b262-41f6-a004-7f141703c57d",
     "displayName": "SLIP",
     "percentage": 76,
-    "updatedAt": "2023-08-17T10:00:15.766122091Z",
+    "updatedAt": "2023-08-25T19:19:05.535934464Z",
     "tags": [
       "China affected",
       "Application mapped to level 1 Business Capability, please map to lowest level, i.e. level 3 instead!",
-      "Maturity Level 4"
+      "Maturity Level 2"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -3976,7 +4077,7 @@ export default [
     "id": "2815d2f3-bd1e-4345-b829-08b7173f0225",
     "displayName": "SPCT China",
     "percentage": 55,
-    "updatedAt": "2023-06-26T13:25:35.161214Z",
+    "updatedAt": "2023-08-25T11:26:07.001681037Z",
     "tags": [
       "Critical",
       "Manufacturing",
@@ -4124,8 +4225,8 @@ export default [
   {
     "id": "150c1e1a-ed81-4a29-bc47-eaf991900604",
     "displayName": "SWAT",
-    "percentage": 46,
-    "updatedAt": "2023-07-05T13:08:39.756946793Z",
+    "percentage": 48,
+    "updatedAt": "2023-08-28T09:27:46.318146871Z",
     "tags": [
       "China affected",
       "Maturity Level 1"
@@ -4162,7 +4263,7 @@ export default [
     "id": "fd0e35b8-2f2a-4b42-a4a7-1453137e1cba",
     "displayName": "SWS",
     "percentage": 29,
-    "updatedAt": "2023-08-17T02:14:03.667141264Z",
+    "updatedAt": "2023-08-18T14:24:13.257324004Z",
     "tags": [
       "Critical",
       "PII",
@@ -4282,7 +4383,7 @@ export default [
     "id": "ab958181-5923-41e0-8d5e-b86d396c95e3",
     "displayName": "TIA",
     "percentage": 79,
-    "updatedAt": "2023-07-11T09:22:31.050785998Z",
+    "updatedAt": "2023-08-25T02:53:36.834182694Z",
     "tags": [
       "China affected",
       "Maturity Level 4"
@@ -4355,10 +4456,10 @@ export default [
     "id": "ffbe88cd-e3e5-4d82-9408-6ad8a591fe60",
     "displayName": "Toolsnet",
     "percentage": 78,
-    "updatedAt": "2023-07-07T05:44:56.243934925Z",
+    "updatedAt": "2023-08-23T11:43:53.421861013Z",
     "tags": [
       "China affected",
-      "Maturity Level 2"
+      "Maturity Level 4"
     ],
     "level": 1,
     "status": "ACTIVE"
@@ -4366,11 +4467,11 @@ export default [
   {
     "id": "190728a8-e326-4f9e-af9d-e99b1739b6da",
     "displayName": "Toolsnet / ToolsTalk2 SE",
-    "percentage": 78,
-    "updatedAt": "2023-07-07T05:44:56.543634270Z",
+    "percentage": 79,
+    "updatedAt": "2023-08-23T11:44:18.675933734Z",
     "tags": [
       "China affected",
-      "Maturity Level 2"
+      "Maturity Level 4"
     ],
     "level": 2,
     "status": "ACTIVE"
@@ -4393,7 +4494,7 @@ export default [
     "id": "1e2ce6a7-2030-4532-bdce-a0c2f63e0cca",
     "displayName": "Truckcam Toein DT",
     "percentage": 82,
-    "updatedAt": "2023-07-25T11:20:43.124038075Z",
+    "updatedAt": "2023-08-18T13:17:40.387760263Z",
     "tags": [
       "China affected",
       "Maturity Level 4"
@@ -4405,7 +4506,7 @@ export default [
     "id": "a19d8c00-bdd6-4632-8b46-f66e811a17e9",
     "displayName": "Truckcam Wheeladjustment",
     "percentage": 83,
-    "updatedAt": "2023-07-25T11:20:59.253764671Z",
+    "updatedAt": "2023-08-18T13:15:27.174323104Z",
     "tags": [
       "China affected",
       "Maturity Level 4"
@@ -4525,8 +4626,8 @@ export default [
   {
     "id": "b01d1caf-da9d-4b3c-b4d6-7cccf602d019",
     "displayName": "VISA",
-    "percentage": 73,
-    "updatedAt": "2023-08-16T12:59:14.026503140Z",
+    "percentage": 74,
+    "updatedAt": "2023-08-24T14:55:51.126993824Z",
     "tags": [
       "China affected",
       "Maturity Level 2"
@@ -4657,8 +4758,8 @@ export default [
   {
     "id": "588d98c2-a797-4378-8ba2-653a5571cec8",
     "displayName": "XCOM",
-    "percentage": 61,
-    "updatedAt": "2023-07-25T14:19:36.119542144Z",
+    "percentage": 63,
+    "updatedAt": "2023-08-18T14:14:08.262967157Z",
     "tags": [
       "R&D",
       "Significant",

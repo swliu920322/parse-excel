@@ -57,7 +57,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [
@@ -97,6 +98,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -212,7 +218,7 @@ export default {
       },
       {
         "id": "01bb2f2a-4c2b-449d-bf4b-35b871fffdcf",
-        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems / EDIM - Embedded method development",
+        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems / EEDIM - Common Methods",
         "usageType": "user",
         "description": null,
         "lifecycle": {
@@ -220,7 +226,7 @@ export default {
           "phases": [
             {
               "phase": "active",
-              "startDate": "2022-10-01"
+              "startDate": "2023-08-25"
             }
           ]
         },

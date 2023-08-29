@@ -101,7 +101,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [
@@ -154,6 +155,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -626,6 +632,21 @@ export default {
         "description": null,
         "displayName": "https://polarion.scania.com/polarion/",
         "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "3348ad25-9d7f-4443-8809-3badc866e271",
+        "description": null,
+        "displayName": "Polarion / Polarion TARA_TARA to RMS: Goals and Claims data",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2022-06-30"
+            }
+          ]
+        },
         "tags": []
       }
     ],

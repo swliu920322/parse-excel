@@ -45,7 +45,8 @@ export default {
       ]
     },
     "productCategory": "Handheld Computers",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

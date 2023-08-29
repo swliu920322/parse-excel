@@ -33,10 +33,10 @@ export default {
       ]
     },
     {
-      "firstName": "Haohao",
-      "lastName": "He",
-      "displayName": "Haohao He",
-      "email": "haohao.he@scania.com",
+      "firstName": null,
+      "lastName": null,
+      "displayName": "jorgen.mardberg@scania.com",
+      "email": "jorgen.mardberg@scania.com",
       "type": "RESPONSIBLE",
       "role": [
         "Product Owner"
@@ -48,7 +48,8 @@ export default {
     "description": "GT-POWER is the industry standard engine performance simulation, used by all major engine manufacturers and vehicle OEMs. GT-POWER is used to predict engine performance quantities such as power, torque, airflow, volumetric efficiency, fuel consumption, turbocharger performance and matching, and pumping losses, to name just a few.",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -76,6 +77,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

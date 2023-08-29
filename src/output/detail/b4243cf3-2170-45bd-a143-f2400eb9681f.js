@@ -48,7 +48,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -167,25 +168,6 @@ export default {
     ],
     "organisations": [
       {
-        "id": "01bb2f2a-4c2b-449d-bf4b-35b871fffdcf",
-        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems / EDIM - Embedded method development",
-        "usageType": "owner",
-        "description": null,
-        "lifecycle": {
-          "asString": "active",
-          "phases": [
-            {
-              "phase": "active",
-              "startDate": "2022-10-01"
-            }
-          ]
-        },
-        "subscriptions": [],
-        "tags": [
-          "From IGA"
-        ]
-      },
-      {
         "id": "ef5338d9-dee4-43ab-a52d-f8e9853c3cd4",
         "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems / EEDIF - Embedded Process Tools Development F",
         "usageType": "ITmaintenance",
@@ -196,6 +178,25 @@ export default {
             {
               "phase": "active",
               "startDate": "2023-07-14"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "From IGA"
+        ]
+      },
+      {
+        "id": "01bb2f2a-4c2b-449d-bf4b-35b871fffdcf",
+        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems / EEDIM - Common Methods",
+        "usageType": "owner",
+        "description": null,
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2023-08-25"
             }
           ]
         },

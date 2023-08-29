@@ -135,6 +135,14 @@ export default {
       "email": "jakub.zurek@scania.com",
       "type": "OBSERVER",
       "role": []
+    },
+    {
+      "firstName": "Ola",
+      "lastName": "Appelkvist",
+      "displayName": "Ola Appelkvist",
+      "email": "ola.appelkvist@scania.com",
+      "type": "OBSERVER",
+      "role": []
     }
   ],
   "information": {
@@ -151,11 +159,23 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
     "children": [
+      {
+        "id": "b24bef28-2b35-4347-b0bd-86ad61abad47",
+        "activeFrom": "2023-04-21",
+        "activeUntil": null,
+        "description": "Cloud-based ALM(Application Lifecycle Management) solution for cloud and hybrid customers. Cloud ALM is currently being used for IEB for monitoring errorS of SAP CPI and SAP ERP systems and also for monitoring certificate due dates. CALM also sends email notifictaions on errors and also while nearing certificate expiry date.",
+        "displayName": "Industrial ERP Backbone (IEB) / SAP Cloud ALM",
+        "type": "Application",
+        "lifecycle": null,
+        "tags": [],
+        "subscriptions": []
+      },
       {
         "id": "9d4fb893-d3c6-4634-bce1-a2c065d087a1",
         "activeFrom": "2023-04-21",
@@ -167,6 +187,28 @@ export default {
         "tags": [
           "Maturity Level 2"
         ],
+        "subscriptions": []
+      },
+      {
+        "id": "13503ba9-c849-4dd1-b361-e87e8aada528",
+        "activeFrom": "2023-04-21",
+        "activeUntil": null,
+        "description": "Cloud based Event mesh is Event broker. This is a part of the cloud PaaS called SAP Business Technology Platform. This allows applications to communicate through asynchronous events.",
+        "displayName": "Industrial ERP Backbone (IEB) / SAP Event Mesh",
+        "type": "Application",
+        "lifecycle": null,
+        "tags": [],
+        "subscriptions": []
+      },
+      {
+        "id": "5db91761-6e8d-48a8-a3a7-30fb56689ee0",
+        "activeFrom": "2023-04-21",
+        "activeUntil": null,
+        "description": "SAP Identity Authentication (IAS) is available as a cloud service on SAP Business Technology Platform. This enables all user authentication requirements to be implemented in cloud system landscapes. SAP Cloud Identity Services provide basic capabilities for user authentication and provisioning",
+        "displayName": "Industrial ERP Backbone (IEB) / SAP IAS",
+        "type": "Application",
+        "lifecycle": null,
+        "tags": [],
         "subscriptions": []
       }
     ]

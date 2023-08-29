@@ -1,23 +1,15 @@
 <script setup lang='ts'>
-import { RouterLink, RouterView } from 'vue-router'
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting
-} from '@element-plus/icons-vue'
 import Menu from '@/components/Menu.vue'
 </script>
 
 <template>
-  <view class='flex h-full'>
+  <view class='flex h-full overflow-hidden'>
     <header style='height: 100%;'>
       <Menu />
     </header>
-    <div class='p-4'>
+    <div class='p-4 flex-1 overflow-auto'>
       <RouterView />
     </div>
-
   </view>
 </template>
 

@@ -1,7 +1,7 @@
 export default {
   "completion": {
-    "percentage": 83,
-    "ChinaReadiness": 58,
+    "percentage": 86,
+    "ChinaReadiness": 83,
     "EnterpriseGuardrails": 100,
     "businessSupport": 85,
     "dataManagement": 63,
@@ -123,7 +123,8 @@ export default {
       ]
     },
     "productCategory": "Supplier collaboration",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -542,7 +543,7 @@ export default {
       {
         "id": "d6ecb7bd-d10a-4181-ad64-72e50e106a63",
         "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Lifecycle Management",
-        "description": "Supplier Qualifications, Supplier Registration, Supplier Segmentation, Supplier Offboarding",
+        "description": "The ability to handle and continuously improve the supplier base. This includes Supplier Registration, Supplier On-boarding, Supplier Qualifications, Supplier Off-boarding.",
         "lifecycle": {
           "asString": "active",
           "phases": [
@@ -560,7 +561,7 @@ export default {
       {
         "id": "24d40011-93ad-4aee-b8c4-781a09633470",
         "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Performance Management",
-        "description": "Supplier Performance Evaluation, Supplier Evaluation Measurement, Supplier Progress Monitoring (Risk and Sustainability)",
+        "description": "The ability to evaluate supplier performance through the full life cycle based on TQDCS (Technology, Quality, Delivery, Cost and Sustainability).",
         "lifecycle": {
           "asString": "active",
           "phases": [
@@ -992,9 +993,11 @@ export default {
   },
   "chinaInfo": {
     "ChinaITlegalCompliance": "GapsFound",
-    "ExportControlOfAppl": null,
-    "LicenseUsageRights": null,
-    "LicenceStatus": null,
+    "ExportControlOfAppl": "NA",
+    "LicenseUsageRights": "NA",
+    "LicenceStatus": [
+      "NA"
+    ],
     "ChinaRequirements": "SNI",
     "ChinaDesign": "IZB",
     "ChinaSourcing": "N/A",

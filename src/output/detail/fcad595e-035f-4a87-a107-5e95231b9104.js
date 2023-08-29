@@ -224,7 +224,8 @@ export default {
         "tags": [],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -782,8 +783,8 @@ export default {
       },
       {
         "id": "c3c0dc13-e5f2-4410-b087-0ce4c826f255",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Material & Services Procurement / Purchase Ordering",
-        "description": "Eg: \n\nâ€¢ Supplier purchase order/call off (including NAP Ordering, AP Ordering, Tools Ordering, Experimental Parts Ordering)\n\nâ€¢ Supplier delivery scheduling (including Supplier delivery schedule creation, Supplier delivery schedule distribution)",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Material & Services Procurement / Purchase Order Processing",
+        "description": "The ability of processing a requisition into a commercial document. Including Supplier purchase order/call off (incl. NAP Ordering, AP Ordering, Tools Ordering, Experimental Parts Ordering).",
         "lifecycle": {
           "asString": "active",
           "phases": [
@@ -835,24 +836,6 @@ export default {
         ]
       },
       {
-        "id": "e009835d-88e7-4e09-a0f0-e56faf8bdb84",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Purchase Contract Management",
-        "description": "Legal contract, Commercial contract & Operational contract (Purchase price handling, Purchase Agreement Distribution, Contract lifecycle)",
-        "lifecycle": {
-          "asString": "active",
-          "phases": [
-            {
-              "phase": "active",
-              "startDate": "2018-09-13"
-            }
-          ]
-        },
-        "subscriptions": [],
-        "tags": [
-          "China affected"
-        ]
-      },
-      {
         "id": "e1ddfcef-a764-44c1-a96c-c0e714531fbc",
         "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Sourcing Execution",
         "description": "RFx Management, Negotiation Management, Sourcing Decision (Compare, Decide, Distribute)",
@@ -889,9 +872,27 @@ export default {
         ]
       },
       {
+        "id": "e009835d-88e7-4e09-a0f0-e56faf8bdb84",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Sourcing Management / Supplier Contract Management and Administration",
+        "description": "The ability to manage legal contracts and commercial contracts (Purchase price handling, Purchase Agreement Distribution, Contract life-cycle).",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2018-09-13"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "China affected"
+        ]
+      },
+      {
         "id": "24d40011-93ad-4aee-b8c4-781a09633470",
         "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Performance Management",
-        "description": "Supplier Performance Evaluation, Supplier Evaluation Measurement, Supplier Progress Monitoring (Risk and Sustainability)",
+        "description": "The ability to evaluate supplier performance through the full life cycle based on TQDCS (Technology, Quality, Delivery, Cost and Sustainability).",
         "lifecycle": {
           "asString": "active",
           "phases": [

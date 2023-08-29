@@ -68,7 +68,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -136,6 +137,25 @@ export default {
       }
     ],
     "organisations": [
+      {
+        "id": "1544a5df-a909-4c6b-bfda-17ad7332b66e",
+        "displayName": "Scania - Scania CV AB",
+        "usageType": "user",
+        "description": null,
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2019-04-26"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "From IGA"
+        ]
+      },
       {
         "id": "a2de9e60-a5ed-4ff5-889b-eac676b81fb2",
         "displayName": "Scania - Scania CV AB / I - Scania IT / IX - Shared Services / IXH - Information Security / IXHD - Electronic Identification Solutions",

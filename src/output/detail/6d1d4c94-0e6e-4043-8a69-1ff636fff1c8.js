@@ -78,7 +78,21 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "fcad595e-035f-4a87-a107-5e95231b9104",
+        "displayName": "Scania D365 Golden Blueprint",
+        "description": "Blueprint for Scania D365. Used by Commercial Operations, Scania Financial Services",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2",
+          "Target State Commercial"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],

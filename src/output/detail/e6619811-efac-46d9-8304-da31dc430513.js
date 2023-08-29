@@ -101,6 +101,14 @@ export default {
       "role": [
         "Product Owner"
       ]
+    },
+    {
+      "firstName": "Enno",
+      "lastName": "Grüning",
+      "displayName": "Enno Grüning",
+      "email": "enno.gruning@scania.com",
+      "type": "OBSERVER",
+      "role": []
     }
   ],
   "information": {
@@ -133,7 +141,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

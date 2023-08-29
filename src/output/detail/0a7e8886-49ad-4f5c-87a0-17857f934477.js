@@ -3,7 +3,7 @@ export default {
     "percentage": 55,
     "ChinaReadiness": 8,
     "EnterpriseGuardrails": 100,
-    "businessSupport": 78,
+    "businessSupport": 80,
     "dataManagement": 75,
     "dependencies": 0,
     "information": 67,
@@ -68,7 +68,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -133,7 +134,7 @@ export default {
       {
         "id": "1544a5df-a909-4c6b-bfda-17ad7332b66e",
         "displayName": "Scania - Scania CV AB",
-        "usageType": "owner",
+        "usageType": "user",
         "description": null,
         "lifecycle": {
           "asString": "active",
@@ -150,9 +151,28 @@ export default {
         ]
       },
       {
+        "id": "19079d5b-8055-478e-b5d7-18c666a8cc3d",
+        "displayName": "Scania - Scania CV AB / I - Scania IT / IF - Finance & Governance / IFC - IFC Software Asset Management",
+        "usageType": "owner",
+        "description": null,
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2023-06-01"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "From IGA"
+        ]
+      },
+      {
         "id": "7750e36d-aba0-4fe4-bf0e-eb0f1894ab27",
         "displayName": "Scania - Scania CV AB / L - Scania Latin America",
-        "usageType": null,
+        "usageType": "user",
         "description": null,
         "lifecycle": {
           "asString": "active",

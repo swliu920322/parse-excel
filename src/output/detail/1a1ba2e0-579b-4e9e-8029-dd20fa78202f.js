@@ -65,7 +65,8 @@ export default {
       ]
     },
     "productCategory": "Statistics",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

@@ -55,7 +55,8 @@ export default {
       ]
     },
     "productCategory": "CMS",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

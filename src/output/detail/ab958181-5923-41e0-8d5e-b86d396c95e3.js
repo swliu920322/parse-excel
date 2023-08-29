@@ -57,6 +57,14 @@ export default {
       "email": "siddhant.bajaj@scania.com",
       "type": "OBSERVER",
       "role": []
+    },
+    {
+      "firstName": "Hans",
+      "lastName": "Liu",
+      "displayName": "Hans Liu",
+      "email": "hans.liu@scania.com",
+      "type": "OBSERVER",
+      "role": []
     }
   ],
   "information": {
@@ -90,6 +98,18 @@ export default {
         "description": "Injury case handling.",
         "type": "Application",
         "tags": [],
+        "subscriptions": []
+      }
+    ],
+    "successor": [
+      {
+        "id": "bb99c6c4-a48b-4fe3-a9cd-6bb836da5fae",
+        "displayName": "RIVO SGB",
+        "description": "An online portal for storage of health and safety management and reporting – May be replaced by Tia (Preferred application by Sweden)\n\n",
+        "type": "Application",
+        "tags": [
+          "Maturity Level 1"
+        ],
         "subscriptions": []
       }
     ]

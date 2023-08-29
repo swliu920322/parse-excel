@@ -210,6 +210,16 @@ export default {
         "tags": [],
         "subscriptions": []
       }
+    ],
+    "successor": [
+      {
+        "id": "0d74052e-caf9-42db-bbdc-6954fec32f15",
+        "displayName": "TEESA Tool",
+        "description": null,
+        "type": "Application",
+        "tags": [],
+        "subscriptions": []
+      }
     ]
   },
   "dependencies": {
@@ -252,6 +262,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

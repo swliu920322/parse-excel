@@ -133,7 +133,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -146,7 +147,7 @@ export default {
         "displayName": "ALTO / China Virtual Workspace",
         "type": "Application",
         "lifecycle": {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -172,7 +173,7 @@ export default {
         "displayName": "ALTO / MAN Virtual Workspace",
         "type": "Application",
         "lifecycle": {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -198,7 +199,7 @@ export default {
         "displayName": "ALTO / Navistar Virtual Workspace",
         "type": "Application",
         "lifecycle": {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -224,7 +225,7 @@ export default {
         "displayName": "ALTO / Scania Virtual Workspace",
         "type": "Application",
         "lifecycle": {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -250,7 +251,7 @@ export default {
         "displayName": "ALTO / TRATON Financial Services Virtual Workspace",
         "type": "Application",
         "lifecycle": {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -276,7 +277,7 @@ export default {
         "displayName": "ALTO / TRATON Holding Virtual Workspace",
         "type": "Application",
         "lifecycle": {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -302,7 +303,7 @@ export default {
         "displayName": "ALTO / VWTB Virtual Workspace",
         "type": "Application",
         "lifecycle": {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -744,7 +745,7 @@ export default {
           ]
         },
         {
-          "asString": "drpCompleted",
+          "asString": "drpReview",
           "phases": [
             {
               "phase": "drpCompleted",
@@ -1474,6 +1475,13 @@ export default {
             }
           ]
         },
+        "tags": []
+      },
+      {
+        "id": "6fc7d7ec-aa1d-43fd-a548-802a006db6ea",
+        "description": null,
+        "displayName": "CAR (Common Architecture Repository)_OSLC API",
+        "lifecycle": null,
         "tags": []
       },
       {

@@ -47,6 +47,16 @@ export default {
       "role": [
         "IT Delivery Responsible"
       ]
+    },
+    {
+      "firstName": "Abdikani",
+      "lastName": "Mohamed Ahmed",
+      "displayName": "Abdikani Mohamed Ahmed",
+      "email": "abdikani.mohamed.ahmed@scania.com",
+      "type": "RESPONSIBLE",
+      "role": [
+        "IT Delivery Responsible"
+      ]
     }
   ],
   "information": {
@@ -63,7 +73,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

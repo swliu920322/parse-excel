@@ -62,7 +62,8 @@ export default {
       ]
     },
     "productCategory": "Application",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

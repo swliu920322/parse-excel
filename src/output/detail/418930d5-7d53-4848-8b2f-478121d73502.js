@@ -210,7 +210,7 @@ export default {
       },
       {
         "id": "29cbe59b-b677-46fc-88f3-7c3102dfe327",
-        "displayName": "PUS / STOMS",
+        "displayName": "PUS 2003 / STOMS",
         "description": "Stop Time Overview MS",
         "type": "Application",
         "tags": [
@@ -226,6 +226,19 @@ export default {
         "type": "Application",
         "tags": [
           "Not China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ],
+    "successor": [
+      {
+        "id": "1a18a606-db2d-448c-9ac4-45b647bed3fb",
+        "displayName": "APT",
+        "description": "The APT (Assembly of Prototype Trucks) system is used by 5-10 users at Chassis in Södertälje. APT is used to generate five different reports/lists with parts information. The lists are then being used to support the assembly of prototype trucks.  APT is a web application developed in .net. It uses information from Delmia (digital factory) and compares that information with the A-order from Mona and then complements with information from ECO, AI, EQ2 and Matris.\r\n",
+        "type": "Application",
+        "tags": [
+          "China affected",
           "Maturity Level 2"
         ],
         "subscriptions": []
@@ -617,6 +630,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }

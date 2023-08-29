@@ -89,7 +89,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

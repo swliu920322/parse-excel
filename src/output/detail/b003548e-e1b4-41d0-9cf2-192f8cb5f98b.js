@@ -58,7 +58,8 @@ export default {
     "description": "Connected Logistics\n\nHandshake information” between individual AGV and Line stations/drop of station\n   - AGV in position\n   - Clear to move in\n   - Pallet delivered \nInterface for Fleet management information\nInterface for order of empty pallet\nInterface for replenishment triggers\nInterface for building signals such a fire alarm/evacuation ",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [
@@ -68,7 +69,8 @@ export default {
         "description": "Connected Logistics\n\nHandshake information” between individual AGV and Line stations/drop of station\n   - AGV in position\n   - Clear to move in\n   - Pallet delivered \nInterface for Fleet management information\nInterface for order of empty pallet\nInterface for replenishment triggers\nInterface for building signals such a fire alarm/evacuation ",
         "type": "Application",
         "tags": [
-          "China affected"
+          "China affected",
+          "Maturity Level 2"
         ],
         "subscriptions": []
       }

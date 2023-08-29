@@ -52,7 +52,17 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "ccfb5726-12fa-4b12-bd34-65ac1d42aaeb",
+        "displayName": "Basware P2P",
+        "description": null,
+        "type": "Application",
+        "tags": [],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],

@@ -155,6 +155,19 @@ export default {
         ],
         "subscriptions": []
       }
+    ],
+    "successor": [
+      {
+        "id": "e1c35e88-af74-444d-88bf-751c38fd1137",
+        "displayName": "MySuccess",
+        "description": "Global application for HR, supporting global processes. ",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 4"
+        ],
+        "subscriptions": []
+      }
     ]
   },
   "dependencies": {
@@ -162,6 +175,83 @@ export default {
     "children": []
   },
   "initiatives": [
+    {
+      "id": "6466ab9b-286b-47d2-85e4-43aa872904e9",
+      "displayName": "AV/KV implementation",
+      "fullName": "AV/KV implementation",
+      "tags": [
+        "Not China affected",
+        "Maturity Level 2"
+      ],
+      "lifecycle": {
+        "asString": "active",
+        "phases": [
+          {
+            "phase": "plan",
+            "startDate": "2019-01-01"
+          },
+          {
+            "phase": "phaseIn",
+            "startDate": "2019-07-01"
+          },
+          {
+            "phase": "active",
+            "startDate": "2020-08-01"
+          },
+          {
+            "phase": "endOfLife",
+            "startDate": "2023-11-15"
+          }
+        ]
+      },
+      "subscriptions": [
+        {
+          "displayName": "Philipp Hilarius",
+          "email": "philipp.hilarius@scania.com",
+          "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Arian Blakaj",
+          "email": "arian.blakaj@scania.com",
+          "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Bassam Atto",
+          "email": "bassam.atto@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Katarina Lindeborg",
+          "email": "katarina.lindeborg@scania.com",
+          "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "taru.lakanen@scania.com",
+          "email": "taru.lakanen@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Jessica Moro Berg",
+          "email": "jessica.moro_berg@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Anna-Lena Henriksson",
+          "email": "anna-lena.henriksson@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Helena Niss",
+          "email": "helena.niss@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Linda Wirström",
+          "email": "linda.wirstrom@scania.com",
+          "type": "RESPONSIBLE"
+        }
+      ]
+    },
     {
       "id": "667a57ea-4bbf-4c83-813c-95488719f443",
       "displayName": "MySuccess",
@@ -254,6 +344,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

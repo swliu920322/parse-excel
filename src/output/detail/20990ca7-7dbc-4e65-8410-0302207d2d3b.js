@@ -47,6 +47,14 @@ export default {
       "role": [
         "IT Delivery Responsible"
       ]
+    },
+    {
+      "firstName": "Jeroen",
+      "lastName": "Hoekstra",
+      "displayName": "Jeroen Hoekstra",
+      "email": "jeroen.hoekstra@scania.com",
+      "type": "RESPONSIBLE",
+      "role": []
     }
   ],
   "information": {
@@ -68,7 +76,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -107,6 +116,11 @@ export default {
         {
           "displayName": "Torgrim Oldenburg",
           "email": "torgrim.oldenburg@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Christianne Sandstig",
+          "email": "christianne.sandstig@scania.com",
           "type": "OBSERVER"
         }
       ]

@@ -50,7 +50,8 @@ export default {
       ]
     },
     "productCategory": "Embedded SW testing",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [

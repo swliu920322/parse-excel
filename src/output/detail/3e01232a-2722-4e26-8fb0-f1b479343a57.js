@@ -53,7 +53,8 @@ export default {
       ]
     },
     "productCategory": "Marketing / Marketing Resource Management ; ERP / Project ; Content Management / Online Form Builder",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

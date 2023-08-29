@@ -101,7 +101,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -274,6 +275,11 @@ export default {
         {
           "displayName": "Joanna Pochec",
           "email": "joanna.pochec@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
           "type": "OBSERVER"
         }
       ]

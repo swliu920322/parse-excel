@@ -28,7 +28,8 @@ export default {
     "description": "Container management and development.",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

@@ -1,7 +1,7 @@
 export default {
   "completion": {
-    "percentage": 69,
-    "ChinaReadiness": 50,
+    "percentage": 71,
+    "ChinaReadiness": 75,
     "EnterpriseGuardrails": 0,
     "businessSupport": 67,
     "dataManagement": 49,
@@ -12,17 +12,6 @@ export default {
     "sourcing": 60
   },
   "subscriptions": [
-    {
-      "firstName": "Martin",
-      "lastName": "Zeller",
-      "displayName": "Martin Zeller",
-      "email": "martin.zeller@scania.com",
-      "type": "RESPONSIBLE",
-      "role": [
-        "Product Owner",
-        "IT Delivery Responsible"
-      ]
-    },
     {
       "firstName": "Rickard",
       "lastName": "Ångman",
@@ -56,6 +45,16 @@ export default {
       "email": "max.ten@scania.com",
       "type": "OBSERVER",
       "role": []
+    },
+    {
+      "firstName": "Pankaj",
+      "lastName": "Gupta",
+      "displayName": "Pankaj Gupta",
+      "email": "pankaj.gupta@scania.com",
+      "type": "RESPONSIBLE",
+      "role": [
+        "Product Owner"
+      ]
     }
   ],
   "information": {
@@ -173,7 +172,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -246,6 +246,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -1343,12 +1348,12 @@ export default {
       ],
       "accessControl": []
     },
-    "ssoProvider": "miniOrange, Okta",
+    "ssoProvider": "miniOrange, Okta, OpenID Connect",
     "statusSSO": "supported"
   },
   "chinaInfo": {
-    "ChinaITlegalCompliance": null,
-    "ExportControlOfAppl": null,
+    "ChinaITlegalCompliance": "DAcompleted",
+    "ExportControlOfAppl": "NA",
     "LicenseUsageRights": null,
     "LicenceStatus": null,
     "ChinaRequirements": "IBG",

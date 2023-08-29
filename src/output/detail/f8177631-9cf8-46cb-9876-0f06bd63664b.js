@@ -1,6 +1,6 @@
 export default {
   "completion": {
-    "percentage": 77,
+    "percentage": 79,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 100,
     "businessSupport": 65,
@@ -9,7 +9,7 @@ export default {
     "information": 92,
     "projects": 100,
     "robots": 100,
-    "sourcing": 60
+    "sourcing": 80
   },
   "subscriptions": [
     {
@@ -93,7 +93,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -121,6 +122,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -902,7 +908,7 @@ export default {
       ],
       "accessControl": []
     },
-    "ssoProvider": "WAM via FG",
+    "ssoProvider": "AAD via FG",
     "statusSSO": "supported"
   },
   "chinaInfo": {

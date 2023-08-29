@@ -1,9 +1,9 @@
 export default {
   "completion": {
-    "percentage": 27,
+    "percentage": 29,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 0,
-    "businessSupport": 48,
+    "businessSupport": 68,
     "dataManagement": 0,
     "dependencies": 0,
     "information": 67,
@@ -43,7 +43,20 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "1dd65326-2788-4006-aa91-11aec0b646a6",
+        "displayName": "Gadget3",
+        "description": "Gadget3 will replace Gadget and Gadget II as a tool for R&D to create and execute sequences for different diagnostic services (i.e. software download, parameter setting, read/erase DTC:s, read/write SOPS etc). Sequences can be created manually or automatically based on information from ECUCompare.\nWiki for Gadget3: https://teams.microsoft.com/l/channel/19%3A80ac06974bea494f95fed9555744676b%40thread.skype/tab%3A%3A792ee1d8-d617-445a-a141-aa5b8939375a?groupId=da995977-bdc1-4973-9d04-46e7491eda03&tenantId=3bc062e4-ac9d-4c17-b4dd-3aad637ff1ac&allowXTenantAccess=false",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -71,6 +84,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

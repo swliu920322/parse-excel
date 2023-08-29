@@ -47,7 +47,8 @@ export default {
       ]
     },
     "productCategory": "MES",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [

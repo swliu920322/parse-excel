@@ -87,7 +87,20 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "aad92866-e07b-4693-9a82-a2c2d5d340e9",
+        "displayName": "Avix China 5",
+        "description": "This is a Pre-prod environment to test Avix implementation in China. AviX is a video based process improvement/development tool for all manufacturing processes. AviX consists of three independent modules Method, Balance and FMEA. A SCANIA license contains three modules. The AviX software could be used in many different ways, both in manual assembly, machine shaping, robot cells and resetting of machines. ",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 1"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -115,6 +128,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

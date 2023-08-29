@@ -74,13 +74,14 @@ export default {
         },
         {
           "phase": "active",
-          "startDate": "2025-12-31",
+          "startDate": "2024-01-01",
           "milestoneId": null
         }
       ]
     },
     "productCategory": "Shared Services, Integration",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -144,6 +145,25 @@ export default {
       }
     ],
     "organisations": [
+      {
+        "id": "3bf97c76-07ee-4b8e-8a7c-158bdcdaa386",
+        "displayName": "Scania - Scania CV AB / I - Scania IT / IR - PD IT / IRC - PDM OAS / IRCA - OAS Application & Platform",
+        "usageType": "user",
+        "description": null,
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2021-03-01"
+            }
+          ]
+        },
+        "subscriptions": [],
+        "tags": [
+          "From IGA"
+        ]
+      },
       {
         "id": "ce12db79-4b79-44f6-8244-e0d2b7875a6a",
         "displayName": "Scania - Scania CV AB / I - Scania IT / IX - Shared Services / IXC - Enabling Services / IXCC - Integration Services",

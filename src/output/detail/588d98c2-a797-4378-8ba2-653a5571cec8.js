@@ -1,9 +1,9 @@
 export default {
   "completion": {
-    "percentage": 61,
+    "percentage": 63,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 0,
-    "businessSupport": 68,
+    "businessSupport": 88,
     "dataManagement": 63,
     "dependencies": 100,
     "information": 83,
@@ -64,7 +64,8 @@ export default {
         "tags": [],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -113,6 +114,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

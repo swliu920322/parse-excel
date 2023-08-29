@@ -1,10 +1,10 @@
 export default {
   "completion": {
-    "percentage": 73,
+    "percentage": 74,
     "ChinaReadiness": 8,
     "EnterpriseGuardrails": 100,
     "businessSupport": 55,
-    "dataManagement": 38,
+    "dataManagement": 50,
     "dependencies": 100,
     "information": 92,
     "projects": 100,
@@ -57,7 +57,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -126,25 +127,16 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
-        }
-      ]
-    },
-    {
-      "id": "0ea00db6-79e7-40b6-8599-c5fae8ed82ce",
-      "displayName": "SLA Portfolio - Inhouse",
-      "fullName": "SLA Portfolio - Inhouse",
-      "tags": [],
-      "lifecycle": null,
-      "subscriptions": [
+        },
         {
-          "displayName": "Eduardo Chagas",
-          "email": "eduardo.chagas@scania.com",
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
           "type": "OBSERVER"
         }
       ]
     },
     {
-      "id": "20d3b6e3-d375-4dcc-9ac5-b7ff35343901",
+      "id": "55392288-6464-4aa2-a975-bf81194971bd",
       "displayName": "SLA Portfolio - Keep Full",
       "fullName": "SLA Portfolio - Keep Full",
       "tags": [],
@@ -290,7 +282,15 @@ export default {
   },
   "management": {
     "objects": [],
-    "interfaceConsume": [],
+    "interfaceConsume": [
+      {
+        "id": "00e44a70-6457-4a90-aa49-ced212612eb8",
+        "description": null,
+        "displayName": "LAS_CREDIT_RATING",
+        "lifecycle": null,
+        "tags": []
+      }
+    ],
     "interfaceProvide": [
       {
         "id": "b941e59c-33fb-4a63-a5af-ad83947933f6",

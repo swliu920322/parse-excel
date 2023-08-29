@@ -55,7 +55,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [
@@ -225,6 +226,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }
@@ -543,6 +549,25 @@ export default {
         "description": "Sending contract SCCO7224\nSCIS117_Dynamate_Finess",
         "displayName": "Coredination_scco7248",
         "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "3755d233-cc88-4e84-a7c8-12449a5b993e",
+        "description": null,
+        "displayName": "Edicom_API_eInvoice v1",
+        "lifecycle": {
+          "asString": "phaseIn",
+          "phases": [
+            {
+              "phase": "phaseIn",
+              "startDate": "2023-08-01"
+            },
+            {
+              "phase": "active",
+              "startDate": "2024-07-01"
+            }
+          ]
+        },
         "tags": []
       },
       {

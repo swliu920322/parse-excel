@@ -1,15 +1,15 @@
 export default {
   "completion": {
-    "percentage": 81,
+    "percentage": 85,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 100,
-    "businessSupport": 57,
+    "businessSupport": 78,
     "dataManagement": 100,
     "dependencies": 100,
     "information": 96,
     "projects": 100,
     "robots": 100,
-    "sourcing": 78
+    "sourcing": 88
   },
   "subscriptions": [
     {
@@ -162,6 +162,18 @@ export default {
         "tags": [
           "Not China affected",
           "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ],
+    "successor": [
+      {
+        "id": "ddac483c-caaa-489e-8733-b4b8e270e56f",
+        "displayName": "SCALA - SCADA SLA",
+        "description": "The SCALA system is a new application for Cabin workshop in SLA. Cabin Assembly\nWill replace DIDRIK",
+        "type": "Application",
+        "tags": [
+          "Maturity Level 1"
         ],
         "subscriptions": []
       }
@@ -420,6 +432,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }

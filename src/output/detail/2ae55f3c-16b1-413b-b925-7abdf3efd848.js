@@ -62,7 +62,8 @@ export default {
     "description": "Will be provided shortly by Johan L. ",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

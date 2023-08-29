@@ -55,7 +55,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -235,7 +236,7 @@ export default {
               },
               {
                 "phase": "endOfLife",
-                "startDate": "2020-04-28"
+                "startDate": "2020-04-30"
               }
             ]
           },

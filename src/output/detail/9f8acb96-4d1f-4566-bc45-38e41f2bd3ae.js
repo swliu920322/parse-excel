@@ -85,7 +85,8 @@ export default {
       ]
     },
     "productCategory": "Education Software / Online Course Providers",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

@@ -45,7 +45,20 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "b349611b-30f2-49aa-ac3f-01271eebd957",
+        "displayName": "EXCIT-CLASS 1.0",
+        "description": "Export control classification tool. This is a SaaS solution provided from a supplier named AEB. The tool is calculating the percentage of parts that subject to export control using the BOM for a product. ",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -73,6 +86,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }

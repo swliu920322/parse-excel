@@ -48,7 +48,8 @@ export default {
     "description": "The analytics and reporting capabilities integrated in Digital Dealer are built on a PowerBI platform and allows DD users to get analytics, statistics and reports of DD usage and vehicles with their workshop as homeworkshop etc.",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [

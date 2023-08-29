@@ -77,7 +77,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -258,7 +259,7 @@ export default {
       },
       {
         "id": "19ac912d-97d9-46fb-8d62-74f0e4353c43",
-        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems / EDIX - Management Systems and Digital thread",
+        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems / EEDIX - Software Factory Definition & Digital thread",
         "usageType": "user",
         "description": null,
         "lifecycle": {
@@ -266,7 +267,7 @@ export default {
           "phases": [
             {
               "phase": "active",
-              "startDate": "2022-10-01"
+              "startDate": "2023-08-25"
             }
           ]
         },

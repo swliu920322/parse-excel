@@ -4,7 +4,7 @@ export default {
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 100,
     "businessSupport": 71,
-    "dataManagement": 76,
+    "dataManagement": 78,
     "dependencies": 100,
     "information": 92,
     "projects": 100,
@@ -104,7 +104,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -570,6 +571,13 @@ export default {
         ]
       },
       {
+        "id": "abd61ed2-0480-4c48-a70c-b966ad329034",
+        "description": null,
+        "displayName": "SALSA (SAP Spare parts)_INVOICE",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
         "id": "017f2864-e186-4f81-9f33-f7d09bf16878",
         "description": null,
         "displayName": "SALSA (SAP Spare parts)_logiweb-wishlist-api IE v1",
@@ -582,6 +590,20 @@ export default {
             }
           ]
         },
+        "tags": []
+      },
+      {
+        "id": "81e8acdb-9e6a-43e1-817e-b06baca9b613",
+        "description": null,
+        "displayName": "SALSA (SAP Spare parts)_ORDER",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "17ba23a7-9e4d-4d3d-b589-600a67cd7cf9",
+        "description": null,
+        "displayName": "SALSA (SAP Spare parts)_ORDER_ACKNOWLEDGEMENT",
+        "lifecycle": null,
         "tags": []
       },
       {

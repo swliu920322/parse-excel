@@ -1,12 +1,12 @@
 export default {
   "completion": {
-    "percentage": 13,
+    "percentage": 16,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 50,
     "businessSupport": 28,
     "dataManagement": 0,
     "dependencies": 0,
-    "information": 13,
+    "information": 38,
     "projects": 0,
     "robots": 0,
     "sourcing": 27
@@ -17,7 +17,7 @@ export default {
       "lastName": "Carter",
       "displayName": "Harley Carter",
       "email": "harley.carter@scania.com",
-      "type": "OBSERVER",
+      "type": "RESPONSIBLE",
       "role": [
         "Architect"
       ]
@@ -34,9 +34,19 @@ export default {
   "information": {
     "name": "Draw.io",
     "description": "Free online drawing tool for many types of architecture diagram. Allows output to saved direct to OneDrive",
-    "lifecycle": null,
+    "lifecycle": {
+      "asString": "active",
+      "phases": [
+        {
+          "phase": "active",
+          "startDate": "2022-01-01",
+          "milestoneId": null
+        }
+      ]
+    },
     "productCategory": "Diagramming Software",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -59,7 +69,7 @@ export default {
       {
         "id": "307d0d40-ccc2-429a-b5ce-e09289b16b7d",
         "displayName": "Scania - Scania CV AB / P_CO - Commercial Operations / W - Regional Office / WN - Region Northern Europe / WN - BU United Kingdom",
-        "usageType": "user",
+        "usageType": "owner",
         "description": null,
         "lifecycle": {
           "asString": "active",

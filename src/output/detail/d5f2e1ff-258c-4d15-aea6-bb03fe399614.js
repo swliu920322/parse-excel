@@ -47,7 +47,19 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "604e97ac-cb3d-4398-ac88-7c0e7a15c2ed",
+        "displayName": "Plandisc",
+        "description": "Used for annual wheel planning",
+        "type": "Application",
+        "tags": [
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [

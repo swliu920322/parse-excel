@@ -106,7 +106,8 @@ export default {
       ]
     },
     "productCategory": "Customs operation",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -1145,6 +1146,7 @@ export default {
             ]
           },
           "tags": [
+            "Not China affected",
             "Not available from China"
           ]
         }

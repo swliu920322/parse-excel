@@ -60,7 +60,30 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "981869d0-b661-4ae5-99be-b7570cbfd9aa",
+        "displayName": "OAS Platform / OAS",
+        "description": "Objects & Structures is Genetic Tool for Product data Master -  Part management , Structure Management ,(KS Design Structure etc ) Change Management -ECO .",
+        "type": "Application",
+        "tags": [
+          "Not China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      },
+      {
+        "id": "30f97797-7724-401c-b112-fec6c1c06b5c",
+        "displayName": "VSI Orchestration Suite",
+        "description": "Vehicle Service Information (VSI) Orchestration Suite provides interfaces to expose service information that includes, maintenance, repair, diagnos.  End of Q42022 goal is to provide maintenance info to MEM.\n\nMIO - Maintenance in OAS",
+        "type": "Application",
+        "tags": [
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -88,6 +111,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }

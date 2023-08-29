@@ -144,7 +144,28 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "14b49223-16f5-417b-afa3-dfbfbddb24ab",
+        "displayName": "Oracle Financials (EBS) / eBS_AR",
+        "description": "AR: Accounts Receivable, module in Oracle eBS.",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      },
+      {
+        "id": "6df92840-59e8-4cd3-a500-9ddcb45241c7",
+        "displayName": "Soleil",
+        "description": "Scania Outbound Logistics Exchange Information on Line:\r\nAn application with the purpose of supporting the outbound process. The Outbound Process is the process of distribution of Scania trucks and bus chassis from our 3 European Production Units to the assigned first delivery address. We handle both truck, buses and DDM and Non-DDM markets in the Soleil application. Soleil doesn't take care of yet KD-buses (N-chassis), SLA-market responsibilities, Omni or chassis to the lab (R&D).",
+        "type": "Application",
+        "tags": [],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -215,6 +236,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -569,6 +595,11 @@ export default {
         {
           "displayName": "Joanna Pochec",
           "email": "joanna.pochec@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
           "type": "OBSERVER"
         }
       ]
@@ -1324,6 +1355,7 @@ export default {
             ]
           },
           "tags": [
+            "Not China affected",
             "Not available from China"
           ]
         },

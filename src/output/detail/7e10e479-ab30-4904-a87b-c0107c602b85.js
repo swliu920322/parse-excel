@@ -74,7 +74,8 @@ export default {
         "tags": [],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [

@@ -62,7 +62,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -371,6 +372,21 @@ export default {
             {
               "phase": "active",
               "startDate": "2021-09-03"
+            }
+          ]
+        },
+        "tags": []
+      },
+      {
+        "id": "8244054b-c4ed-42e5-ad54-cbeb02581be9",
+        "description": "This is a new architecture RESTFul API for the IGA system.",
+        "displayName": "IGA - Identity Governance & Administration_IGAAPI2ndGen IE v0.1",
+        "lifecycle": {
+          "asString": "active",
+          "phases": [
+            {
+              "phase": "active",
+              "startDate": "2022-01-31"
             }
           ]
         },

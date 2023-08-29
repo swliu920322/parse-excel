@@ -48,7 +48,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [
@@ -161,6 +162,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -253,8 +259,8 @@ export default {
       },
       {
         "id": "b4ef4b4c-d27c-41b3-a8e2-ffad86b1f703",
-        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Relationships",
-        "description": "Find and contract qualified suppliers based on the ability of sustainable relations and work with continued improvement regarding risk elimination, quality and innovation using the approved processes and tools.",
+        "displayName": "G. Sourcing and Purchasing (Procurement) / Supplier Management / Supplier Relationship Management",
+        "description": "Collaborate and maintain qualified suppliers in line with TQDCS (Technology, Quality, Delivery, Cost and Sustainability) value drivers using sustainable methods. Continuously improve value drivers by working proactively with risk management, cost, quality, sustainability and innovation using approved processes and tools.",
         "lifecycle": {
           "asString": "active",
           "phases": [

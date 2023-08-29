@@ -57,7 +57,19 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "64f2e931-f772-4338-bb5b-066afb8229d7",
+        "displayName": "JIRA SLA - JIRA Scania Latin America",
+        "description": "Issues tracking tool for Latin America",
+        "type": "Application",
+        "tags": [
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],

@@ -28,7 +28,8 @@ export default {
     "description": "Diagnostic Trouble Code (DTC) information written as user understandable information \nDTC Specification (generas via DIMA tool).\n\n",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

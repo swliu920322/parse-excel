@@ -128,7 +128,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [
@@ -168,6 +169,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -420,7 +426,7 @@ export default {
       },
       {
         "id": "1a1dcecc-c110-4a3f-b35d-5ef9c5fab346",
-        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EM - Modular Solutions / EMC - Regulations & Standards",
+        "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EM - Modular Solutions / EMC - Product Compliance",
         "usageType": null,
         "description": null,
         "lifecycle": {
@@ -428,7 +434,7 @@ export default {
           "phases": [
             {
               "phase": "active",
-              "startDate": "2023-07-14"
+              "startDate": "2023-08-22"
             }
           ]
         },

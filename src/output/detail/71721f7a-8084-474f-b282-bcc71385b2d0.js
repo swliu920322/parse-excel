@@ -47,7 +47,8 @@ export default {
       ]
     },
     "productCategory": "Software Design Software / Wireframing Software",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -121,6 +122,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -253,6 +259,11 @@ export default {
         {
           "displayName": "Hamed Khalighi",
           "email": "hamed.khalighi@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
           "type": "OBSERVER"
         }
       ]
@@ -476,12 +487,12 @@ export default {
     "ExportControlOfAppl": "OK",
     "LicenseUsageRights": null,
     "LicenceStatus": null,
-    "ChinaRequirements": "IXCD",
+    "ChinaRequirements": "IXIB",
     "ChinaDesign": "Supplier",
-    "ChinaSourcing": "IXCD",
-    "ChinaPaying": "IXCD",
-    "ChinaImplementation": "IXCD",
-    "Chinaverification": "IXCD",
-    "ChinaOperations": "IXCD"
+    "ChinaSourcing": "IXIB",
+    "ChinaPaying": "IXIB",
+    "ChinaImplementation": "IXIB",
+    "Chinaverification": "IXIB",
+    "ChinaOperations": "IXIB"
   }
 }

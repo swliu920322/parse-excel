@@ -1,9 +1,9 @@
 export default {
   "completion": {
-    "percentage": 24,
+    "percentage": 26,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 50,
-    "businessSupport": 35,
+    "businessSupport": 55,
     "dataManagement": 25,
     "dependencies": 0,
     "information": 63,
@@ -140,7 +140,8 @@ export default {
         ],
         "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

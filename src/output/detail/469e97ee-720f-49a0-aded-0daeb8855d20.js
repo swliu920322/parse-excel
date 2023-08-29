@@ -115,7 +115,8 @@ export default {
       ]
     },
     "productCategory": "Data warehouse",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [

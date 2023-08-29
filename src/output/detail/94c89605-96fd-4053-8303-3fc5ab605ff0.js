@@ -48,7 +48,8 @@ export default {
     "description": "Digital Dealer support uses the Service Now platform and is fully integrated to the Digital Dealer application, with child applications. It allows a user to talk to support and register and follow up cases.",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [

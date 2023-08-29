@@ -53,7 +53,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -513,7 +514,7 @@ export default {
               },
               {
                 "phase": "active",
-                "startDate": "2021-11-02"
+                "startDate": "2021-08-18"
               },
               {
                 "phase": "phaseOut",

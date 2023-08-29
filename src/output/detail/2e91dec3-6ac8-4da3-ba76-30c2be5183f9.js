@@ -37,7 +37,22 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "82174e33-0f6b-46a0-96fb-46d2b9160b7c",
+        "displayName": "ScaniaNow",
+        "description": "ServiceNow is a hosted and cloud-based Software As A Service platform that hosts many different modules for company internal services.\n\nAreas using ScaniaNow: request fulfillment, asset management and Digital dealer (downtime registration). ITSM (replacing Service Center 3) and parts of HR services will be in place in the end of 2022.",
+        "type": "Application",
+        "tags": [
+          "Significant",
+          "China affected",
+          "Application mapped to level 1 Business Capability, please map to lowest level, i.e. level 3 instead!",
+          "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
@@ -65,6 +80,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }

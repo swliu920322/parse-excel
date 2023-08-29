@@ -17,7 +17,8 @@ export default {
     "description": "Writing of C-code in general purpose, to complement model based code.\nC-code editor.\nIs used to write/create test script that then can be run in the application.",
     "lifecycle": null,
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

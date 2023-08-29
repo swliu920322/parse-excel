@@ -67,8 +67,19 @@ export default {
           "Maturity Level 2"
         ],
         "subscriptions": []
+      },
+      {
+        "id": "7a18a77c-e008-4bd0-ac77-fcbc78763c6a",
+        "displayName": "O365 FI",
+        "description": "Microsoft O365 services for Scania Finland tenant.",
+        "type": "Application",
+        "tags": [
+          "Maturity Level 1"
+        ],
+        "subscriptions": []
       }
-    ]
+    ],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -259,6 +270,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },

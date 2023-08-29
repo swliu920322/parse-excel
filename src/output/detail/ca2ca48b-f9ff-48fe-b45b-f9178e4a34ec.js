@@ -1,7 +1,7 @@
 export default {
   "completion": {
-    "percentage": 31,
-    "ChinaReadiness": 8,
+    "percentage": 32,
+    "ChinaReadiness": 25,
     "EnterpriseGuardrails": 50,
     "businessSupport": 55,
     "dataManagement": 13,
@@ -45,7 +45,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -73,6 +74,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     }
@@ -186,8 +192,10 @@ export default {
   "chinaInfo": {
     "ChinaITlegalCompliance": "SQCsent",
     "ExportControlOfAppl": null,
-    "LicenseUsageRights": null,
-    "LicenceStatus": null,
+    "LicenseUsageRights": "OK",
+    "LicenceStatus": [
+      "ScaniaGroupContract"
+    ],
     "ChinaRequirements": "",
     "ChinaDesign": "",
     "ChinaSourcing": "",

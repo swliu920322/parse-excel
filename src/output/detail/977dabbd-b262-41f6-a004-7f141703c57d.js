@@ -4,7 +4,7 @@ export default {
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 100,
     "businessSupport": 89,
-    "dataManagement": 50,
+    "dataManagement": 51,
     "dependencies": 100,
     "information": 92,
     "projects": 100,
@@ -76,6 +76,16 @@ export default {
         "id": "9d3d0e48-8be8-4889-a9d3-8ba6a877615e",
         "displayName": "SL-AROS",
         "description": "SL-AROS is under phase out and is almost entirely replaced by SALSA(SAP) since 2018. \nThe following functions are still active in SL-AROS.\nRegional warehouse invoicing\nParts master data.\nDistribution of customer, parts, prices for some applications.\n\nSL-AROS is a common name for 22 sub application covering the main processes of Spare parts handling at Scania. \n\n\nThe following business processes are supported: Order & Customer Support, Parts Accounting, Parts Assortment, Parts Pricing, Supply Control, Transport and Warehouse. ",
+        "type": "Application",
+        "tags": [],
+        "subscriptions": []
+      }
+    ],
+    "successor": [
+      {
+        "id": "99896980-245b-4a84-984f-092c109e0b00",
+        "displayName": "SLIP Cloud",
+        "description": "Next Generation SLIP, SLIP in AWS - POC - Will be updated with more information once we have a more clear view // Anne Malmqvist",
         "type": "Application",
         "tags": [],
         "subscriptions": []
@@ -157,6 +167,11 @@ export default {
         {
           "displayName": "Joanna Pochec",
           "email": "joanna.pochec@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
           "type": "OBSERVER"
         }
       ]
@@ -652,6 +667,62 @@ export default {
           ]
         },
         "tags": []
+      },
+      {
+        "id": "57831caa-a6d2-4f8b-a66e-8e550e3ba476",
+        "description": null,
+        "displayName": "WEND_DEMAND_DETAIL",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "ec30b86c-359a-4479-a763-e372e7564861",
+        "description": null,
+        "displayName": "WEND_ORDER_PLAN",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "f12e666a-610e-4ca3-b38d-153361d1998d",
+        "description": null,
+        "displayName": "WEND_PAIR_UPDATE",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "eaf97e0c-cf6b-4e4a-9637-b7aa2710821f",
+        "description": null,
+        "displayName": "WEND_PART_CHAIN",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "75111bd7-b103-416d-b103-b310314f5419",
+        "description": null,
+        "displayName": "WEND_PART_KIT",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "d49f927f-9411-448b-8c22-b7cef35dafba",
+        "description": null,
+        "displayName": "WEND_SKU",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "c418d864-9aa4-4e19-bf24-e2fad5ba5464",
+        "description": null,
+        "displayName": "WEND_STOCK_AMOUNT",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "37ef45cd-4f1a-4418-8800-cc90f0ba44de",
+        "description": null,
+        "displayName": "WEND_VENDOR_LOC_SKU",
+        "lifecycle": null,
+        "tags": []
       }
     ],
     "interfaceProvide": [
@@ -708,6 +779,13 @@ export default {
         "id": "7a9d4443-e2af-4130-8998-6a69360c58f8",
         "description": null,
         "displayName": "SLIP_MULTI Sellable Parts",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "f48b0306-491f-461b-9341-004ff283e070",
+        "description": null,
+        "displayName": "SLIP_ORDER_PLAN",
         "lifecycle": null,
         "tags": []
       },
@@ -793,6 +871,13 @@ export default {
         "id": "00806d6c-0494-49bc-91f9-c00059ba3905",
         "description": null,
         "displayName": "SLIP_PricePoint std Price",
+        "lifecycle": null,
+        "tags": []
+      },
+      {
+        "id": "b94035a8-1238-4ff1-bdc6-8f4d0b2cad10",
+        "description": null,
+        "displayName": "SLIP_RECOMMENDED_ORDERS",
         "lifecycle": null,
         "tags": []
       },
@@ -1029,6 +1114,7 @@ export default {
             ]
           },
           "tags": [
+            "Not China affected",
             "Not available from China"
           ]
         }

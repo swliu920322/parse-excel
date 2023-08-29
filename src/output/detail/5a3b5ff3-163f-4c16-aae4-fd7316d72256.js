@@ -27,10 +27,8 @@ export default {
       "lastName": "Ulltin",
       "displayName": "Malin Ulltin",
       "email": "malin.ulltin@scania.com",
-      "type": "RESPONSIBLE",
-      "role": [
-        "Product Owner"
-      ]
+      "type": "OBSERVER",
+      "role": []
     },
     {
       "firstName": "Liver",
@@ -66,7 +64,9 @@ export default {
       "displayName": "Pia Saifer",
       "email": "pia.saifer@scania.com",
       "type": "RESPONSIBLE",
-      "role": []
+      "role": [
+        "Product Owner"
+      ]
     }
   ],
   "information": {
@@ -83,7 +83,8 @@ export default {
       ]
     },
     "productCategory": "Vertical Industry / Education",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

@@ -85,7 +85,21 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "82b58d39-e1a3-4a5f-8aec-1f377e557e7d",
+        "displayName": "Digital Dealer / Pactum",
+        "description": "Administration, invoicing, cost control and  follow up of R&M contracts.\n\nThis fact sheet also includes Contract Repository, Price Model and Claim gateway. \n\nCS Market map\nhttps://csmarkets-service.6cpa1lp6jep7e.eu-west-1.cs.amazonlightsail.com/",
+        "type": "Application",
+        "tags": [
+          "Not China affected",
+          "Maturity Level 3",
+          "Target State Commercial"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],

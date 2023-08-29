@@ -1,9 +1,9 @@
 export default {
   "completion": {
-    "percentage": 82,
+    "percentage": 88,
     "ChinaReadiness": 100,
-    "EnterpriseGuardrails": 50,
-    "businessSupport": 76,
+    "EnterpriseGuardrails": 100,
+    "businessSupport": 77,
     "dataManagement": 63,
     "dependencies": 100,
     "information": 71,
@@ -125,7 +125,8 @@ export default {
       ]
     },
     "productCategory": "N/A",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -139,6 +140,7 @@ export default {
         "type": "Application",
         "lifecycle": null,
         "tags": [
+          "R&D",
           "China affected",
           "Maturity Level 2"
         ],
@@ -148,12 +150,14 @@ export default {
         "id": "acb4a4b9-345f-4818-bb66-0cf282de459a",
         "activeFrom": null,
         "activeUntil": null,
-        "description": "Polarion TARA is the tool provided to Truck System and User Function owners for the Threat Analysis and Risk Assessment.\nThis tool aims to answer to UNECE R155 requirements in the area of Risk Assessment.",
+        "description": "Polarion TARA is the tool provided to Truck System and User Function owners for the Threat Analysis and Risk Assessment.\nThis tool aims to answer to UNECE R155 requirements in the area of Risk Assessment.\nNote: several properties are inherited from Polarion platform.",
         "displayName": "Polarion / Polarion TARA",
         "type": "Application",
         "lifecycle": null,
         "tags": [
-          "R&D"
+          "R&D",
+          "China affected",
+          "Maturity Level 2"
         ],
         "subscriptions": []
       }
@@ -181,6 +185,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -207,81 +216,6 @@ export default {
           "displayName": "Joanna Pochec",
           "email": "joanna.pochec@scania.com",
           "type": "OBSERVER"
-        }
-      ]
-    },
-    {
-      "id": "ee392920-59eb-4fc5-bec7-7e72ab89881a",
-      "displayName": "SAS Industrial Project - China / Powertrain Assembly IT for China",
-      "fullName": "Powertrain Assembly IT for China",
-      "tags": [
-        "China affected",
-        "Maturity Level 2"
-      ],
-      "lifecycle": {
-        "asString": "active",
-        "phases": [
-          {
-            "phase": "active",
-            "startDate": "2022-08-14"
-          }
-        ]
-      },
-      "subscriptions": [
-        {
-          "displayName": "Alexander Wedin",
-          "email": "alexander.wedin@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Jonathan Cartaxo",
-          "email": "jonathan.cartaxo@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Fredrik Blomstedt",
-          "email": "fredrik.blomstedt@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Eddie Löwenborg Forsberg",
-          "email": "eddie.lowenborg.forsberg@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Jacob Rydgård",
-          "email": "jacob.rydgard@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Anders Kardeskog",
-          "email": "anders.kardeskog@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Henrik Bylund",
-          "email": "henrik.bylund@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Joanna Pochec",
-          "email": "joanna.pochec@scania.com",
-          "type": "OBSERVER"
-        },
-        {
-          "displayName": "Claes Boije",
-          "email": "claes.boije@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Marcelo Colovato",
-          "email": "marcelo.colovato@scania.com",
-          "type": "RESPONSIBLE"
-        },
-        {
-          "displayName": "Burak Gavgacioglu",
-          "email": "burak.gavgacioglu@scania.com",
-          "type": "RESPONSIBLE"
         }
       ]
     },
@@ -466,7 +400,7 @@ export default {
       {
         "id": "65e6e56c-2a76-493a-ba81-89ee7ead3ede",
         "displayName": "Scania - Scania CV AB / P_RDP - R&D and Purchasing / EE - EE Software and Autonomous / EED - Software Development System / EEDI - Information Architecture and Tool Chain for Embedded Systems",
-        "usageType": null,
+        "usageType": "user",
         "description": null,
         "lifecycle": {
           "asString": "active",
@@ -663,6 +597,7 @@ export default {
             ]
           },
           "tags": [
+            "China affected",
             "From SCT"
           ]
         },

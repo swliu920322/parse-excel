@@ -1,6 +1,6 @@
 export default {
   "completion": {
-    "percentage": 38,
+    "percentage": 39,
     "ChinaReadiness": 0,
     "EnterpriseGuardrails": 50,
     "businessSupport": 45,
@@ -9,7 +9,7 @@ export default {
     "information": 88,
     "projects": 100,
     "robots": 0,
-    "sourcing": 30
+    "sourcing": 45
   },
   "subscriptions": [
     {
@@ -109,6 +109,20 @@ export default {
         "tags": [
           "Not China affected",
           "Maturity Level 2"
+        ],
+        "subscriptions": []
+      }
+    ],
+    "successor": [
+      {
+        "id": "a350d653-0133-4d2d-b498-0520edf5431b",
+        "displayName": "SWAT / ACL-NiFi / New Warranty Solution (Queri project)",
+        "description": "New Warranty Solution (preliminary name) is the new warranty and claims management solution that will replace e.g. SWAT and SGWS.",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 1",
+          "Target State Commercial"
         ],
         "subscriptions": []
       }

@@ -47,7 +47,8 @@ export default {
       ]
     },
     "productCategory": "Marketing / Event Management ; Office / Screen and Video Capture ; Collaboration & Productivity / Video Conferencing",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],

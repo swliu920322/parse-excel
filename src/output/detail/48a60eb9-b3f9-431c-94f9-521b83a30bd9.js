@@ -80,7 +80,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -119,6 +120,11 @@ export default {
         {
           "displayName": "Torgrim Oldenburg",
           "email": "torgrim.oldenburg@scania.com",
+          "type": "OBSERVER"
+        },
+        {
+          "displayName": "Christianne Sandstig",
+          "email": "christianne.sandstig@scania.com",
           "type": "OBSERVER"
         }
       ]

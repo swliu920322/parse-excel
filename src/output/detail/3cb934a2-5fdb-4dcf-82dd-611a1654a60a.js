@@ -49,6 +49,14 @@ export default {
       "role": [
         "IT Delivery Responsible"
       ]
+    },
+    {
+      "firstName": "Max",
+      "lastName": "Ten",
+      "displayName": "Max Ten",
+      "email": "max.ten@scania.com",
+      "type": "OBSERVER",
+      "role": []
     }
   ],
   "information": {
@@ -65,7 +73,8 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": []
   },
   "dependencies": {
     "parent": [],
@@ -93,6 +102,11 @@ export default {
           "displayName": "Anton Smith",
           "email": "anton.smith@scania.com",
           "type": "RESPONSIBLE"
+        },
+        {
+          "displayName": "Enno Grüning",
+          "email": "enno.gruning@scania.com",
+          "type": "OBSERVER"
         }
       ]
     },
@@ -349,6 +363,39 @@ export default {
   "tech": {
     "itComponents": {
       "software": [
+        {
+          "id": "cbcf9115-ae94-4343-9dd6-a83620407b2d",
+          "displayName": "ABB RobotStudio 2020.1",
+          "category": "software",
+          "description": null,
+          "type": "ITComponent",
+          "lifecycle": null,
+          "tags": [
+            "From SCT"
+          ]
+        },
+        {
+          "id": "534193c4-045a-431d-adf4-d7c9183b6f54",
+          "displayName": "ABB RobotStudio 2020.2",
+          "category": "software",
+          "description": null,
+          "type": "ITComponent",
+          "lifecycle": null,
+          "tags": [
+            "From SCT"
+          ]
+        },
+        {
+          "id": "3f4e694e-c747-4934-87ba-c2e1cba7be65",
+          "displayName": "ABB RobotStudio 2020.4",
+          "category": "software",
+          "description": null,
+          "type": "ITComponent",
+          "lifecycle": null,
+          "tags": [
+            "From SCT"
+          ]
+        },
         {
           "id": "4e765adc-887e-482c-8023-3911e6ead700",
           "displayName": "Microsoft Windows Server Standard 2016",

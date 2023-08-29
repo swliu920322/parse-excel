@@ -85,7 +85,20 @@ export default {
       ]
     },
     "productCategory": "",
-    "predecessor": []
+    "predecessor": [],
+    "successor": [
+      {
+        "id": "e1c35e88-af74-444d-88bf-751c38fd1137",
+        "displayName": "MySuccess",
+        "description": "Global application for HR, supporting global processes. ",
+        "type": "Application",
+        "tags": [
+          "China affected",
+          "Maturity Level 4"
+        ],
+        "subscriptions": []
+      }
+    ]
   },
   "dependencies": {
     "parent": [],
