@@ -10,11 +10,15 @@ import Menu from '@/components/Menu.vue'
 </script>
 
 <template>
-  <header>
-    <Menu />
-  </header>
+  <view class='flex h-full'>
+    <header style='height: 100%;'>
+      <Menu />
+    </header>
+    <div class='p-4'>
+      <RouterView />
+    </div>
 
-  <RouterView />
+  </view>
 </template>
 
 <style scoped>
