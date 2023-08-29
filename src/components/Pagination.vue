@@ -1,6 +1,12 @@
 <template>
   <div class='flex justify-end p-4'>
-    <ElPagination background layout='prev, pager, next, total' :total='total' @current-change='changePage' />
+    <ElPagination
+      background
+      :page-sizes='[10, 20, 30, 40, 50]'
+      layout='sizes, prev, pager, next, total' :total='total'
+      @current-change='changePage'
+      @size-change='sizeChange'
+    />
   </div>
 </template>
 
@@ -16,7 +22,10 @@ const props = defineProps({
 })
 
 function changePage(current) {
-  emit('pageChange', current)
+  emit('pageChange', { current })
+}
+function sizeChange(pageSize) {
+  emit('pageChange', { pageSize })
 }
 </script>
 
