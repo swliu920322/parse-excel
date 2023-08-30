@@ -10,6 +10,9 @@
       <el-menu-item index='IntegratedApp'>
         <RouterLink to='/IntegratedApp'>IntegratedApp</RouterLink>
       </el-menu-item>
+      <el-menu-item index='demo'>
+        <RouterLink to='/demo'>demo</RouterLink>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

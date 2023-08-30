@@ -1,5 +1,5 @@
-export const fetchData = () => {
-  return fetch('http://localhost:3000/getData').then(response => {
+export const fetchData = (fileName = 'test') => {
+  return fetch(`http://localhost:3000/getData?excel=${fileName}`).then(response => {
     // 检查响应状态
     if (!response.ok) {
       throw new Error('网络请求失败')

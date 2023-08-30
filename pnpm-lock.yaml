@@ -11,6 +11,9 @@ dependencies:
   autoprefixer:
     specifier: ^10.4.15
     version: registry.npmjs.org/autoprefixer@10.4.15(postcss@8.4.28)
+  dayjs:
+    specifier: ^1.11.9
+    version: registry.npmjs.org/dayjs@1.11.9
   element-plus:
     specifier: ^2.3.12
     version: registry.npmjs.org/element-plus@2.3.12(vue@3.3.4)

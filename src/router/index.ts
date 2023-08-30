@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/IntegratedApp',
       name: 'IntegratedApp',
       component: () => import('../views/IntegratedApp.vue')
+    },
+    {
+      path: '/demo',
+      name: 'demo',
+      component: () => import('../views/demo.vue')
     }
   ]
 })

@@ -67,15 +67,7 @@ function toEdit(scope) {
 }
 
 function download() {
-  exportExcel(allRoutes.map(i => {
-    const { name, description, state, po, viewer, children } = i
-    return {
-      name, description, state,
-      children: children.map(ii => ii.name).join(','),
-      po: po?.displayName,
-      viewer: viewer?.displayName
-    }
-  }), 'all-application-china.xlsx')
+  exportExcel()
 }
 </script>
 
