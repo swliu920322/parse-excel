@@ -25,6 +25,8 @@ function tranObj(val) {
       name: i.displayName,
       id: i.id
     })),
+    rootTargetDate: '',
+    description: information.description,
     category: 'Independent',
     state: information.lifecycle?.asString || '',
     po: subscriptions.filter(i => i.role.includes(ROLE.PO))?.[0],
@@ -43,7 +45,6 @@ for (const path in routeFiles) {
     id: path.split('/').pop().slice(0, -3)
   })
 }
-console.log(allRoutes)
 const rootApp = []
 const independentApp = []
 const needToDeal = []
@@ -90,5 +91,5 @@ function matchDependency(item) {
 }
 
 rootApp.forEach(matchDependency)
-console.log({ rootApp, independentApp, needToDeal, integrated })
-export { rootApp, independentApp, needToDeal, integrated }
+console.log({ rootApp, independentApp, needToDeal, integrated, allRoutes })
+export { rootApp, independentApp, needToDeal, integrated, allRoutes }

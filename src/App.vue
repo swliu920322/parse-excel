@@ -1,5 +1,12 @@
 <script setup lang='ts'>
+import { onMounted } from 'vue'
 import Menu from '@/components/Menu.vue'
+import { fetchData } from '@/util/request'
+
+onMounted(async () => {
+  const res = await fetchData()
+  console.log(res)
+})
 </script>
 
 <template>
