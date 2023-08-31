@@ -1,5 +1,5 @@
 <template>
-  <Table :data='dataRef'>
+  <Table ref='tableRef' :data='dataRef'>
     <template #header>
       <div>
         <el-form ref='formRef' inline :model='searchModel'>
@@ -59,16 +59,17 @@
       </span>
     </template>
   </el-dialog>
-  <el-dialog v-model='recordVisibleRef' center>
+  <el-dialog v-model='recordVisibleRef' title='变更记录' center>
     <el-table :data='recordDataRef'>
-      <el-table-column label='变更记录' prop='record' />
+      <el-table-column type='index' label='#' width='50' />
+      <el-table-column label='记录' prop='record' />
     </el-table>
   </el-dialog>
 </template>
 
 <script setup lang='ts'>
 import Table from '@/components/Table.vue'
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 import { getDate } from '@/util/date'
 import { useRootForm, useSearch } from '@/views/components/RootAppComp.logic'
 
@@ -84,7 +85,7 @@ const props = defineProps({
 })
 
 
-const { openEdit, confirm, cancel, visibleRef, itemInfoRef } = useRootForm()
+const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRootForm()
 const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props.data)
 
 const recordVisibleRef = ref(false)

@@ -7,20 +7,18 @@ function getChangeContext(checkKeys = [], newObj, oldObj) {
   let changeHistory = []
   const changedVal = checkKeys.reduce((r, item) => {
     const { key, type } = item
-    const oldVal = oldObj[key]
+    let oldVal = oldObj[key]
     let newVal = newObj[key]
-    if (type === 'date' && newVal) {
-      newVal = getDate(newVal, false)
+    if (type === 'date') {
+      newVal ? newVal = getDate(newVal, false) : ''
     }
     if (oldVal !== newVal) {
-      changeHistory.push(`${key}: ${oldVal} => ${newVal}`)
-      return {
-        ...r,
-        [key]: newVal
-      }
+      changeHistory.push(`${key}: ${oldVal || '空值'} => ${newVal || '空值'}`)
+      return { ...r, [key]: newVal }
     }
     return r
   }, {})
+  console.log(changeHistory)
   return {
     changeHistory,
     changedVal
@@ -32,10 +30,7 @@ function getChangeContext(checkKeys = [], newObj, oldObj) {
 export const useSearch = (data) => {
   const dataRef = ref(data)
   const formRef = ref()
-  const searchModel = reactive({
-    ['Independent App']: '',
-    Status: ''
-  })
+  const searchModel = reactive({})
 
   function reset() {
     formRef.value.resetFields()
@@ -43,12 +38,11 @@ export const useSearch = (data) => {
   }
 
   function toSearch() {
-    const keys = Object.keys(searchModel)
-    dataRef.value = data.filter(i => {
-      return keys.reduce((r, key) => {
-        return r && i[key].includes(searchModel[key])
-      }, true)
-    })
+    const changedKeys = Object.keys(searchModel)
+    dataRef.value = data.filter(i =>
+      changedKeys.reduce((r, key) =>
+        r && i[key].includes(searchModel[key]), true)
+    )
   }
 
   return {
@@ -60,14 +54,11 @@ export const useSearch = (data) => {
   }
 }
 
-export const useRootAppComp = () => {
-
-}
-
 export const useRootForm = () => {
 
   const visibleRef = ref<boolean>(false)
-
+  const tableRef = ref()
+  // 临时存储，旧数据
   let scopeRef = {}
   const itemInfoRef = ref({})
 
@@ -83,13 +74,10 @@ export const useRootForm = () => {
 
   function confirm() {
     const checkKeys = [
-      {
-        key: 'Target Due Date', type: 'date'
-      }, {
-        key: 'Status', type: 'string'
-      }
+      { key: 'Target Due Date', type: 'date' },
+      { key: 'Status', type: 'string' }
     ]
-    const { changedVal, changeHistory } = getChangeContext(checkKeys, scopeRef, itemInfoRef.value)
+    const { changedVal, changeHistory } = getChangeContext(checkKeys, itemInfoRef.value, scopeRef)
     if (Object.keys(changedVal).length) {
       changedVal.confirmed = true
       Object.assign(scopeRef, changedVal)
@@ -100,7 +88,7 @@ export const useRootForm = () => {
       scopeRef.history += `${prefix}${getDate()} 修改了 ${changeHistory.join('、')}`
       changeObj({
         sheetName: 'rootApp',
-        rowNumber: itemInfoRef.value.index + 2,
+        rowNumber: tableRef.value?.getCurrentPageBase() + itemInfoRef.value.index + 1,
         object: {
           ...changedVal,
           history: scopeRef.history,
@@ -116,6 +104,7 @@ export const useRootForm = () => {
     cancel,
     openEdit,
     visibleRef,
-    itemInfoRef
+    itemInfoRef,
+    tableRef
   }
 }

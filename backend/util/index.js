@@ -35,7 +35,7 @@ class DealExcel {
     let workbook = new Excel.Workbook()
     workbook = await workbook.xlsx.readFile(this.path)
     let worksheet = workbook.getWorksheet(sheetName)
-    let row = worksheet.getRow(rowNumber)
+    let row = worksheet.getRow(rowNumber + 1)
     const keyIndexMap = getKeyIndex(worksheet)
     Object.entries(object).forEach(([key, value]) => {
       const index = keyIndexMap[key]
