@@ -7,6 +7,10 @@
     <el-table-column prop='Sub-TargetDate' label='Sub-TargetDate' />
     <el-table-column prop='Root-TargetDate' label='Root-TargetDate' />
     <el-table-column prop='Time Risk' label='Time Risk' />
+    <el-table-column label='操作' width='140'>
+      <el-button link type='primary'>修改</el-button>
+      <el-button type='danger' link>删除</el-button>
+    </el-table-column>
   </Table>
 </template>
 
