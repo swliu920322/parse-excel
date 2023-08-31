@@ -1,5 +1,24 @@
 <template>
-  <Table :data='data'>
+  <Table :data='dataRef'>
+    <template #header>
+      <div>
+        <el-form ref='formRef' inline :model='searchModel'>
+          <el-form-item prop='Independent App' label='Independent App'>
+            <el-input style='width: 180px' clearable v-model='searchModel["Independent App"]' placeholder='请输入查询内容' />
+          </el-form-item>
+          <el-form-item prop='Status' label='Status'>
+            <el-input style='width: 180px' clearable v-model='searchModel["Status"]' placeholder='请输入状态' />
+          </el-form-item>
+          <el-form-item>
+            <el-button @click='reset'>重置</el-button>
+            <el-button type='primary' @click='toSearch'>查询</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
+      <div>
+        <el-button type='primary'>新增</el-button>
+      </div>
+    </template>
     <el-table-column prop='Independent App' label='Independent App' min-width='140' />
     <el-table-column prop='PRU' label='PRU' />
     <el-table-column prop='Category' label='Category' width='105' />
@@ -24,8 +43,11 @@
   </Table>
   <el-dialog v-model='visibleRef' center title='修改' width='600'>
     <el-form :model='itemInfoRef'>
+      <el-form-item prop='Status' label='Status'>
+        <el-input class='w-full' clearable v-model='itemInfoRef["Status"]' placeholder='请输入状态' />
+      </el-form-item>
       <el-form-item label='Target Due Date' prop='Target Due Date' class='w-full'>
-        <el-date-picker style='width: 100%' v-model='itemInfoRef["Target Due Date"]' />
+        <el-date-picker style='width: 100%' v-model='itemInfoRef["Target Due Date"]' placeholder='请选择日期' />
       </el-form-item>
     </el-form>
     <template #footer>
@@ -46,10 +68,9 @@
 
 <script setup lang='ts'>
 import Table from '@/components/Table.vue'
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { getDate } from '@/util/date'
-import { changeData, changeObj } from '@/util/request'
-import { parseDate } from 'element-plus'
+import { useRootForm, useSearch } from '@/views/components/RootAppComp.logic'
 
 const props = defineProps({
   data: {
@@ -61,47 +82,10 @@ const props = defineProps({
     default: ''
   }
 })
-const visibleRef = ref<boolean>(false)
 
-let scopeRef = {}
-const itemInfoRef = ref({})
 
-function openEdit(row, index) {
-  visibleRef.value = true
-  scopeRef = row
-  itemInfoRef.value = { ...row, index }
-}
-
-function cancel() {
-  visibleRef.value = false
-}
-
-function confirm() {
-  const val = itemInfoRef.value['Target Due Date']
-  const beforeVal = scopeRef['Target Due Date']
-  if (val) {
-    if (getDate(val, false) !== beforeVal) {
-      scopeRef['Target Due Date'] = getDate(val, false)
-      scopeRef.confirmed = true
-      if (!scopeRef.history) {
-        scopeRef.history = ''
-      } else {
-        scopeRef.history += '\n'
-      }
-      scopeRef.history += `${getDate()} 修改了Target Due Date, ${beforeVal ? getDate(beforeVal, false) : '空值'} => ${scopeRef['Target Due Date']}`
-      // changeData(props.data, 'rootApp');
-      changeObj({
-        sheetName: 'rootApp',
-        rowNumber: itemInfoRef.value.index,
-        object: { history: scopeRef.history }
-      })
-
-    }
-    visibleRef.value = false
-  } else {
-    alert('你没有输入内容!')
-  }
-}
+const { openEdit, confirm, cancel, visibleRef, itemInfoRef } = useRootForm()
+const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props.data)
 
 const recordVisibleRef = ref(false)
 const recordDataRef = ref([])

@@ -1,5 +1,6 @@
 <template>
   <div class='flex flex-col h-full'>
+    <slot name='header' />
     <el-table :data='dataSourceRef' stripe  class='flex-1'>
       <el-table-column type='index' label='#' width='50'>
         <template #default='scope'>

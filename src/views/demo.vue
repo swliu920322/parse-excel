@@ -4,14 +4,11 @@
       <el-tab-pane v-for='i of tabListRef' :key='i' :label='i' :name='i' />
     </el-tabs>
     <div class='flex-1 flex flex-col overflow-hidden'>
-      <div>
-        <el-button type='primary'>新增</el-button>
-      </div>
-      <div class='flex-1 overflow-hidden'>
-        <RootAppComp :name='tabListRef[0]' :data='curDataRef' v-if='activeTabRef === tabListRef[0]' />
-        <IndependentAppComp :name='tabListRef[1]' :data='curDataRef' v-else-if='activeTabRef === tabListRef[1]' />
-        <IntegratedComp :name='tabListRef[2]' :data='curDataRef' v-else />
-      </div>
+
+      <RootAppComp :name='tabListRef[0]' :data='curDataRef' v-if='activeTabRef === tabListRef[0]' />
+      <IndependentAppComp :name='tabListRef[1]' :data='curDataRef' v-else-if='activeTabRef === tabListRef[1]' />
+      <IntegratedComp :name='tabListRef[2]' :data='curDataRef' v-else />
+
     </div>
   </div>
 </template>

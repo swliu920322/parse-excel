@@ -10,7 +10,7 @@ const port = 3000
 // 解析 JSON 格式的请求体
 app.use(bodyParser.json())
 app.use(cors({
-  origin: 'http://127.0.0.1', // 允许访问的来源
+  origin: '*', // 允许访问的来源
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // 允许的HTTP方法
   credentials: true, // 允许跨域请求携带cookie
   optionsSuccessStatus: 204 // 设置预检请求成功的状态码
@@ -32,6 +32,7 @@ function exportExcelTotal(infos = [], fileName = '') {
 }
 
 app.get('/getData', (req, res) => {
+  console.log('r', getExcelData())
   res.json({
     data: getExcelData()
   })
