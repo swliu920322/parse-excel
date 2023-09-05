@@ -42,7 +42,12 @@ class DealExcel {
     const keyIndexMap = getKeyIndex(worksheet)
     Object.entries(object).forEach(([key, value]) => {
       const index = keyIndexMap[key]
-      row.getCell(index).value = value
+      const cell = row.getCell(index)
+      if (cell) {
+        cell.value = value
+      } else {
+        // TODO 创建一个cell 存储数据
+      }
     })
     row.commit()
     workbook.xlsx.writeFile(this.path).then(() => 1)

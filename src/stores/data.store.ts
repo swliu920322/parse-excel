@@ -4,17 +4,22 @@ import { fetchData } from '@/util/request'
 
 function dealChildrenRelation(data) {
   const { rootApp, integrated } = data
-  rootApp.forEach(i => {
+  rootApp.forEach((i, index: number) => {
     const { 'Independent App': parName } = i
+    const order = index + 1
     // 更新的时候，更新父类，同时修改子类中的rootTime, 修改rootApp的数据
     // 更新子类，直接更新子类的事件就行, 修改integrated的数据
-    i.children = integrated.filter(ii => ii['Root-App'] === parName).map(ii => {
+    i.children = integrated.filter(ii => ii['Root-App'] === parName).map((ii, idx: number) => {
+      const orderInner = idx + 1
       return {
         ...ii,
         'Independent App': ii['Sub-App'],
-        par: i
+        par: i,
+        index: [order, orderInner].join('-'),
+        curIndex: orderInner
       }
     })
+    i.index = order
   })
 }
 

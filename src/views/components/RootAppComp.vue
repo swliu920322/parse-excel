@@ -29,6 +29,7 @@
         <el-button type='primary'>新增</el-button>
       </div>
     </template>
+    <el-table-column prop='index' label='#' />
     <el-table-column prop='Independent App' label='Independent App' min-width='140' />
     <el-table-column prop='PRU' label='PRU' />
     <el-table-column prop='Category' label='Category' width='105' />
@@ -43,10 +44,10 @@
       </template>
     </el-table-column>
     <el-table-column prop='Risk Description' label='Risk Description' />
-    <el-table-column prop='confirmed' label='confirmed' width='88' />
+    <el-table-column prop='toConfirm' label='待确认' width='88' />
     <el-table-column label='操作' width='180'>
       <template #default='scope'>
-        <el-button link type='primary' @click='openEdit(scope.row, scope.$index)'>修改</el-button>
+        <el-button link type='primary' @click='openEdit(scope.row)'>修改</el-button>
         <el-button link type='success' @click='openRecord(scope.row)'>修改记录</el-button>
         <el-button type='danger' link>删除</el-button>
       </template>

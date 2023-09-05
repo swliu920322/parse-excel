@@ -63,12 +63,12 @@ export const useRootForm = () => {
   let scopeRef = {}
   const itemInfoRef = ref({})
 
-  function openEdit(row: any, index: number) {
-    console.log(row);
-    
+  function openEdit(row: any) {
+    console.log(row)
+
     visibleRef.value = true
     scopeRef = row
-    itemInfoRef.value = { ...row, index }
+    itemInfoRef.value = { ...row }
   }
 
   function cancel() {
@@ -82,20 +82,21 @@ export const useRootForm = () => {
     ]
     const { changedVal, changeHistory } = getChangeContext(checkKeys, itemInfoRef.value, scopeRef)
     if (Object.keys(changedVal).length) {
-      changedVal.confirmed = true
+      changedVal.toConfirm = true
       Object.assign(scopeRef, changedVal)
       if (!scopeRef.history) {
         scopeRef.history = ''
       }
       const prefix = scopeRef.history ? '\n' : ''
       scopeRef.history += `${prefix}${getDate()} 修改了 ${changeHistory.join('、')}`
+
       changeObj({
         sheetName: 'rootApp',
-        rowNumber: tableRef.value?.getCurrentPageBase() + itemInfoRef.value.index + 1,
+        rowNumber: itemInfoRef.value.index,
         object: {
           ...changedVal,
           history: scopeRef.history,
-          confirmed: scopeRef.confirmed
+          toConfirm: scopeRef.toConfirm
         }
       })
     }

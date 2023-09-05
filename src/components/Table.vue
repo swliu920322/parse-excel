@@ -2,7 +2,7 @@
   <div class="flex flex-col h-full">
     <slot name="header" />
     <el-table v-bind="$attrs" default-expand-all :data="dataSourceRef" stripe class="flex-1">
-      <el-table-column type="index" label="#" width="50">
+      <el-table-column v-if='$attrs.needIndex' type="index" label="#" width="50">
         <template #default="scope">
           {{ (pageInfo.current - 1) * pageInfo.pageSize + 1 + scope.$index }}
         </template>
