@@ -1,6 +1,25 @@
 <template>
 
-  <Table :data='data'>
+  <Table :data='dataRef'>
+    <template #header>
+      <div>
+        <el-form ref='formRef' inline :model='searchModel'>
+          <el-form-item prop='Independent App' label='Independent App'>
+            <el-input style='width: 180px' clearable v-model='searchModel["Independent App"]' placeholder='请输入查询内容' />
+          </el-form-item>
+          <el-form-item prop='Status' label='Status'>
+            <el-input style='width: 180px' clearable v-model='searchModel["Status"]' placeholder='请输入状态' />
+          </el-form-item>
+          <el-form-item>
+            <el-button @click='reset'>重置</el-button>
+            <el-button type='primary' @click='toSearch'>查询</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
+      <div>
+        <el-button type='primary'>新增</el-button>
+      </div>
+    </template>
     <el-table-column prop='Independent App' label='Independent App' min-width='140' />
     <el-table-column prop='PRU' label='PRU' />
     <el-table-column prop='Category' label='Category' />
@@ -21,6 +40,7 @@
 <script setup lang='ts'>
 
 import Table from '@/components/Table.vue'
+import { useSearch } from '@/views/components/RootAppComp.logic'
 
 const props = defineProps({
   data: {
@@ -28,6 +48,7 @@ const props = defineProps({
     default: () => []
   }
 })
+const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props.data)
 </script>
 
 <style scoped>

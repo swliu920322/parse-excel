@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang='ts'>
-import { independentApp } from '@/util/index'
+import { independentApp } from '@/util'
 import { onMounted } from 'vue'
 import Table from '@/components/Table.vue'
 

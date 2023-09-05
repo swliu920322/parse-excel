@@ -14,24 +14,12 @@
 </template>
 
 <script setup lang='ts'>
-import { onMounted, ref, computed } from 'vue'
-import { fetchData } from '@/util/request'
 import RootAppComp from '@/views/components/RootAppComp.vue'
 import IntegratedComp from '@/views/components/integratedComp.vue'
 import IndependentAppComp from '@/views/components/independentAppComp.vue'
+import { useData } from '@/views/components/useData'
 
-const activeTabRef = ref('')
-const tabListRef = ref([])
-const dataSourceRef = ref({})
-onMounted(async () => {
-  const { data } = await fetchData()
-  dataSourceRef.value = data
-  tabListRef.value = Object.keys(data).map(i => i)
-  activeTabRef.value = tabListRef.value[0]
-})
-const curDataRef = computed(() => {
-  return dataSourceRef.value[activeTabRef.value]
-})
+const { curDataRef, activeTabRef, tabListRef } = useData()
 </script>
 
 <style scoped>

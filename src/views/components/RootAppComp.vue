@@ -1,5 +1,5 @@
 <template>
-  <Table ref='tableRef' :data='dataRef'>
+  <Table ref='tableRef' row-key='Independent App' :data='dataRef'>
     <template #header>
       <div>
         <el-form ref='formRef' inline :model='searchModel'>

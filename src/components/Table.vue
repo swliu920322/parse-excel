@@ -1,7 +1,7 @@
 <template>
   <div class='flex flex-col h-full'>
     <slot name='header' />
-    <el-table :data='dataSourceRef' stripe class='flex-1'>
+    <el-table v-bind='$attrs' default-expand-all :data='dataSourceRef' stripe class='flex-1'>
       <el-table-column type='index' label='#' width='50'>
         <template #default='scope'>
           {{ (pageInfo.current - 1) * pageInfo.pageSize + 1 + scope.$index }}
@@ -14,7 +14,7 @@
 </template>
 
 <script lang='ts' setup>
-import { defineProps, reactive, computed, defineEmits, defineExpose } from 'vue'
+import {  reactive, computed } from 'vue'
 import Pagination from '@/components/Pagination.vue'
 
 const props = defineProps({

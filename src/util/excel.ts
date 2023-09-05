@@ -23,7 +23,7 @@ export class DataDeal {
 import { integrated, allRoutes, rootApp, independentApp } from '@/util'
 
 export const exportExcel = () => {
-  const dataSheet2 = rootApp.map(i => {
+  const dataSheet1 = rootApp.map(i => {
     const { name, state, po, category, viewer } = i
     return {
       ['Independent App']: name, PRU: '', Category: category,
@@ -34,7 +34,7 @@ export const exportExcel = () => {
       ['Risk Description']: ''
     }
   })
-  const dataSheet1 = independentApp.map(i => {
+  const dataSheet2 = independentApp.map(i => {
     const { name, state, po, category, viewer } = i
     return {
       ['Independent App']: name, PRU: '', Category: category,
@@ -46,7 +46,7 @@ export const exportExcel = () => {
     }
   })
   const dataSheet3 = integrated.map(i => {
-    const { par, name, state, po, category, viewer } = i
+    const { par, state, name, po, category, viewer } = i
     return {
       ['Root-App']: par.name,
       ['Sub-App']: name,
@@ -54,7 +54,11 @@ export const exportExcel = () => {
       ['Dependency Desc']: category,
       ['Sub Due Date']: '',
       ['Target Due Date']: '',
-      ['Time Risk']: ''
+      ['Time Risk']: '',
+      ['APP-Owner']: po?.displayName,
+      ['IT-Viewer']: viewer?.displayName,
+      Status: state,
+      ['Risk Description']: ''
     }
   })
   const info: IInfo[] = [
@@ -73,15 +77,4 @@ function exportExcelTotal(infos: IInfo[] = [], fileName = '') {
   })
   XLSX.writeFileXLSX(wb, fileName)
   return this
-}
-
-export const exportExcelSimple = (data, fileName = '', sheetName = 'Data') => {
-  const ws = XLSX.utils.json_to_sheet(data)
-  const ws1 = XLSX.utils.json_to_sheet([{ name: 1, age: 2 }])
-  const ws2 = XLSX.utils.json_to_sheet([{ name: 3, age: 4 }])
-  const wb = XLSX.utils.book_new()
-  XLSX.utils.book_append_sheet(wb, ws, sheetName)
-  XLSX.utils.book_append_sheet(wb, ws1, 'aa')
-  XLSX.utils.book_append_sheet(wb, ws2, 'bb')
-  XLSX.writeFileXLSX(wb, fileName)
 }
