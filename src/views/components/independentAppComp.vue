@@ -41,14 +41,18 @@
 
 import Table from '@/components/Table.vue'
 import { useSearch } from '@/views/components/RootAppComp.logic'
+import { useDataStore } from '../../stores/data.store';
+import { computed } from 'vue';
 
 const props = defineProps({
-  data: {
-    type: Array,
-    default: () => []
+  activeTab: {
+    type: String,
+    default: ''
   }
 })
-const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props.data)
+const dataStore = useDataStore()
+const dataComputed = computed(() => dataStore.data[props.activeTab])
+const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(dataComputed)
 </script>
 
 <style scoped>

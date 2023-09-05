@@ -1,20 +1,20 @@
 <template>
-  <div class='flex flex-col h-full'>
-    <slot name='header' />
-    <el-table v-bind='$attrs' default-expand-all :data='dataSourceRef' stripe class='flex-1'>
-      <el-table-column type='index' label='#' width='50'>
-        <template #default='scope'>
+  <div class="flex flex-col h-full">
+    <slot name="header" />
+    <el-table v-bind="$attrs" default-expand-all :data="dataSourceRef" stripe class="flex-1">
+      <el-table-column type="index" label="#" width="50">
+        <template #default="scope">
           {{ (pageInfo.current - 1) * pageInfo.pageSize + 1 + scope.$index }}
         </template>
       </el-table-column>
       <slot />
     </el-table>
-    <Pagination :total='data.length' @pageChange='pageChange' />
+    <Pagination :total="data.length" @pageChange="pageChange" />
   </div>
 </template>
 
-<script lang='ts' setup>
-import {  reactive, computed } from 'vue'
+<script lang="ts" setup>
+import { reactive, computed } from 'vue'
 import Pagination from '@/components/Pagination.vue'
 
 const props = defineProps({
@@ -34,7 +34,7 @@ const dataSourceRef = computed(() => {
   return props.data.slice(start, end)
 })
 
-function pageChange(page) {
+function pageChange(page: any) {
   if (page.current) {
     pageInfo.current = page.current
   } else if (page.pageSize) {
@@ -52,6 +52,4 @@ defineExpose({
 })
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

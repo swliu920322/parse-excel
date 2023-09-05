@@ -2,15 +2,19 @@ import { getDate } from '@/util/date'
 import { changeObj } from '@/util/request'
 import { reactive, ref } from 'vue'
 
-function getChangeContext(checkKeys = [], newObj, oldObj) {
+function getChangeContext(
+  checkKeys = [],
+  newObj: Record<string, any>,
+  oldObj: Record<string, any>
+) {
   console.log({ newObj, oldObj })
-  let changeHistory = []
+  const changeHistory: any[] = []
   const changedVal = checkKeys.reduce((r, item) => {
     const { key, type } = item
-    let oldVal = oldObj[key]
+    const oldVal = oldObj[key]
     let newVal = newObj[key]
     if (type === 'date') {
-      newVal ? newVal = getDate(newVal, false) : ''
+      newVal ? (newVal = getDate(newVal, false)) : ''
     }
     if (oldVal !== newVal) {
       changeHistory.push(`${key}: ${oldVal || '空值'} => ${newVal || '空值'}`)
@@ -18,7 +22,6 @@ function getChangeContext(checkKeys = [], newObj, oldObj) {
     }
     return r
   }, {})
-  console.log(changeHistory)
   return {
     changeHistory,
     changedVal
@@ -27,10 +30,10 @@ function getChangeContext(checkKeys = [], newObj, oldObj) {
 
 // 找到变化的key和value
 
-export const useSearch = (data) => {
+export const useSearch = (data: any) => {
   const dataRef = ref(data)
   const formRef = ref()
-  const searchModel = reactive({})
+  const searchModel = reactive<Record<string, any>>({})
 
   function reset() {
     formRef.value.resetFields()
@@ -39,9 +42,8 @@ export const useSearch = (data) => {
 
   function toSearch() {
     const changedKeys = Object.keys(searchModel)
-    dataRef.value = data.filter(i =>
-      changedKeys.reduce((r, key) =>
-        r && i[key].includes(searchModel[key]), true)
+    dataRef.value = data.filter((i: Record<string, any>) =>
+      changedKeys.reduce((r, key) => r && i[key].includes(searchModel[key]), true)
     )
   }
 
@@ -55,14 +57,15 @@ export const useSearch = (data) => {
 }
 
 export const useRootForm = () => {
-
   const visibleRef = ref<boolean>(false)
   const tableRef = ref()
   // 临时存储，旧数据
   let scopeRef = {}
   const itemInfoRef = ref({})
 
-  function openEdit(row, index) {
+  function openEdit(row: any, index: number) {
+    console.log(row);
+    
     visibleRef.value = true
     scopeRef = row
     itemInfoRef.value = { ...row, index }

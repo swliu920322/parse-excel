@@ -26,7 +26,10 @@ class DealExcel {
     const { Sheets, SheetNames } = this.workBook
     const data = {}
     SheetNames.forEach(name => {
-      data[name] = XLSX.utils.sheet_to_json(Sheets[name])
+      data[name] = XLSX.utils.sheet_to_json(Sheets[name], {
+        raw: false,
+        dateNF: 'yyyy-MM-dd'
+      })
     })
     this.data = data
   }

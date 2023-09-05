@@ -1,7 +1,10 @@
 <script setup lang='ts'>
 
 import Menu from '@/components/Menu.vue'
+import { useDataStore } from '@/stores/data.store'
 
+const dataStore = useDataStore()
+dataStore.initData()
 
 </script>
 

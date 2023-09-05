@@ -22,14 +22,16 @@ function dealChildrenRelation(data) {
 }
 
 export const useDataStore = defineStore('data', () => {
-  const dataRef = ref({})
+  const dataRef = ref<Record<string, any[]>>({})
 
-  async function getData() {
+  async function initData() {
     const { data } = await fetchData()
     dealChildrenRelation(data)
+    dataRef.value = data
   }
 
   return {
-    data: dataRef
+    data: dataRef,
+    initData
   }
 })

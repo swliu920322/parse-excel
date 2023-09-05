@@ -1,7 +1,6 @@
 <template>
 
   <Table :data='rootApp'>
-
     <el-table-column prop='name' label='Independent App' min-width='140' />
     <el-table-column prop='' label='PRU' />
     <el-table-column prop='category' label='Category' />
