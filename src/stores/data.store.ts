@@ -4,20 +4,17 @@ import { fetchData } from '@/util/request'
 
 function dealChildrenRelation(data) {
   const { rootApp, integrated } = data
-  console.log('data', data)
   rootApp.forEach(i => {
-    const { 'Independent App': parName, 'Target Due Date': rootDate } = i
-    let isDelay = false
-    i.children = integrated.filter(ii => ii['Root-App'] === parName).map(i => {
-      const innerDelay = new Date(i['Target Due Date']) > new Date(rootDate)
-      isDelay = isDelay || innerDelay
+    const { 'Independent App': parName } = i
+    // 更新的时候，更新父类，同时修改子类中的rootTime, 修改rootApp的数据
+    // 更新子类，直接更新子类的事件就行, 修改integrated的数据
+    i.children = integrated.filter(ii => ii['Root-App'] === parName).map(ii => {
       return {
-        ...i,
-        'Independent App': i['Sub-App'],
-        isDelay: innerDelay
+        ...ii,
+        'Independent App': ii['Sub-App'],
+        par: i
       }
     })
-    i.isDelay = isDelay
   })
 }
 
