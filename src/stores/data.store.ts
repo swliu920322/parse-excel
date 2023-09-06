@@ -1,9 +1,10 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { fetchData } from '@/util/request'
+import { changeObj, fetchData } from '@/util/request'
 
 function dealChildrenRelation(data) {
   const { rootApp, integrated } = data
+  integrated.forEach((i, idx) => i.selfOrder = idx + 1)
   rootApp.forEach((i, index: number) => {
     const { 'Independent App': parName } = i
     const order = index + 1
@@ -34,8 +35,18 @@ export const useDataStore = defineStore('data', () => {
     dataRef.value = data
   }
 
+  function changeData(data: any) {
+    const { sheetName, rowNumber, object } = data
+    dataRef.value[sheetName][rowNumber] = {
+      ...dataRef.value[sheetName][rowNumber],
+      ...object
+    }
+    changeObj(data)
+  }
+
   return {
     data: dataRef,
-    initData
+    initData,
+    changeData
   }
 })

@@ -32,7 +32,6 @@ function exportExcelTotal(infos = [], fileName = '') {
 }
 
 app.get('/getData', (req, res) => {
-  console.log('r', getExcelData().integrated)
   res.json({
     data: getExcelData()
   })
