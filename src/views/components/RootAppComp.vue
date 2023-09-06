@@ -29,14 +29,14 @@
         <el-button type='primary'>新增</el-button>
       </div>
     </template>
-    <el-table-column prop='index' label='#' />
+    <el-table-column prop='index' width='90' label='#' />
     <el-table-column prop='Independent App' label='Independent App' min-width='140' />
     <el-table-column prop='PRU' label='PRU' />
     <el-table-column prop='Category' label='Category' width='105' />
     <el-table-column prop='IT-Viewer' label='IT-Viewer' />
     <el-table-column prop='APP-Owner' label='APP-Owner' />
     <el-table-column prop='Status' label='Status' width='75' />
-    <el-table-column prop='Target Due Date' label='Target Due Date'>
+    <el-table-column prop='Target Due Date' width='100' label='Target Due Date'>
       <template #default='{ row }'>
         <span :style='{ color: getColor(row) }'>
           {{ row['Target Due Date'] && getDate(row['Target Due Date'], false) }}
@@ -92,7 +92,7 @@ import Table from '@/components/Table.vue'
 import { ref, computed } from 'vue'
 import { getDate, firstDateIsEarly } from '@/util/date'
 import { useRootForm, useSearch } from '@/views/components/RootAppComp.logic'
-import { useDataStore } from '../../stores/data.store'
+import { useDataStore } from '@/stores/data.store'
 
 const props = defineProps({
   activeTab: {

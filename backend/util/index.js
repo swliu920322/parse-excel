@@ -25,7 +25,7 @@ class DealExcel {
     this.workBook = XLSX.readFile(filePath || this.path, { type: 'string' })
     const { Sheets, SheetNames } = this.workBook
     const data = {}
-    SheetNames.forEach(name => {
+    SheetNames.forEach((name) => {
       data[name] = XLSX.utils.sheet_to_json(Sheets[name], {
         raw: false,
         dateNF: 'yyyy-MM-dd'
@@ -35,18 +35,19 @@ class DealExcel {
   }
 
   async updateValue({ rowNumber = 3, sheetName = 'data', object = {} }) {
-    let workbook = new Excel.Workbook()
-    workbook = await workbook.xlsx.readFile(this.path)
+    let workbook = await new Excel.Workbook().xlsx.readFile(this.path)
     let worksheet = workbook.getWorksheet(sheetName)
     let row = worksheet.getRow(rowNumber + 1)
     const keyIndexMap = getKeyIndex(worksheet)
     Object.entries(object).forEach(([key, value]) => {
       const index = keyIndexMap[key]
-      const cell = row.getCell(index)
-      if (cell) {
+      if (index >= 0) {
+        const cell = row.getCell(index)
         cell.value = value
       } else {
-        // TODO 创建一个cell 存储数据
+        const newRow = worksheet.getRow(1)
+        newRow.getCell(newRow.actualCellCount + 1).value = key
+        row.getCell(newRow.actualCellCount).value = value
       }
     })
     row.commit()
