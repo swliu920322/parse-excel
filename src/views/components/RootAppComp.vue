@@ -92,10 +92,9 @@
 
 <script setup lang='ts'>
 import Table from '@/components/Table.vue'
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { getDate, firstDateIsEarly } from '@/util/date'
 import { useRootForm, useSearch } from '@/views/components/RootAppComp.logic'
-import { useDataStore } from '@/stores/data.store'
 
 const props = defineProps({
   activeTab: {
@@ -108,7 +107,7 @@ const props = defineProps({
   }
 })
 
-
+console.log(111)
 
 const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRootForm()
 

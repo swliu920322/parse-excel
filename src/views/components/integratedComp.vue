@@ -20,7 +20,7 @@
 <script setup lang='ts'>
 import { getDate } from '@/util/date'
 import Table from '@/components/Table.vue'
-import { useDataStore } from '../../stores/data.store';
+import { useDataStore } from '@/stores/data.store';
 import { computed } from 'vue';
 
 const props = defineProps({
