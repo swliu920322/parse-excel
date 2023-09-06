@@ -16,10 +16,12 @@ function dealChildrenRelation(data) {
         'Independent App': ii['Sub-App'],
         par: i,
         index: [order, orderInner].join('-'),
-        curIndex: orderInner
+        curIndex: orderInner,
+        toConfirm: ii.toConfirm || '否'
       }
     })
     i.index = order
+    i.toConfirm = i.toConfirm || '否'
   })
 }
 

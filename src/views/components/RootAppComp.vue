@@ -19,6 +19,9 @@
               placeholder='请输入状态'
             />
           </el-form-item>
+          <el-form-item prop='toConfirm' label='待确认'>
+            <el-checkbox true-label='是' false-label='否' v-model='searchModel.toConfirm'/>
+          </el-form-item>
           <el-form-item>
             <el-button @click='reset'>重置</el-button>
             <el-button type='primary' @click='toSearch'>查询</el-button>
@@ -106,8 +109,10 @@ const props = defineProps({
 })
 
 const dataStore = useDataStore()
-const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRootForm()
 const dataComputed = computed(() => dataStore.data[props.activeTab])
+
+const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRootForm()
+
 const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(dataComputed)
 
 const recordVisibleRef = ref(false)
@@ -119,10 +124,8 @@ function openRecord(row: any) {
 }
 
 function getColor(row) {
-  if (row.children) {
-    return firstDateIsEarly(row, row.children, 'Target Due Date') ? 'red' : 'black'
-  }
-  return firstDateIsEarly(row.par, row, 'Target Due Date') ? 'red' : 'black'
+  let judge = row.children ? [row, row.children] : [row.par, row]
+  return firstDateIsEarly(...judge, 'Target Due Date') ? 'red' : 'black'
 }
 </script>
 

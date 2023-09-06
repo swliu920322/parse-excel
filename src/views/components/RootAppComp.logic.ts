@@ -1,6 +1,6 @@
 import { getDate } from '@/util/date'
 import { changeObj } from '@/util/request'
-import { reactive, ref } from 'vue'
+import { reactive, ref, computed } from 'vue'
 
 function getChangeContext(
   checkKeys = [],
@@ -31,20 +31,31 @@ function getChangeContext(
 // 找到变化的key和value
 
 export const useSearch = (data: any) => {
-  const dataRef = ref(data)
+  // 根据生效的条件进行过滤
+  let innerSearchRef = ref({})
+  const searchModel = reactive<Record<string, any>>({ toConfirm: false })
+
+  const dataRef = computed(() => {
+    const changedKeys = Object.keys(innerSearchRef.value)
+    return data.value.filter((i: Record<string, any>) => {
+        return changedKeys.reduce((r, key) => {
+          const val = innerSearchRef.value[key]
+          return r && i[key]?.indexOf(val) >= 0
+        }, true)
+      }
+    )
+  })
   const formRef = ref()
-  const searchModel = reactive<Record<string, any>>({})
+
 
   function reset() {
     formRef.value.resetFields()
-    dataRef.value = data
+    innerSearchRef.value = {}
+    // searchModel.
   }
 
   function toSearch() {
-    const changedKeys = Object.keys(searchModel)
-    dataRef.value = data.filter((i: Record<string, any>) =>
-      changedKeys.reduce((r, key) => r && i[key].includes(searchModel[key]), true)
-    )
+    innerSearchRef.value = { ...searchModel }
   }
 
   return {
@@ -64,8 +75,6 @@ export const useRootForm = () => {
   const itemInfoRef = ref({})
 
   function openEdit(row: any) {
-    console.log(row)
-
     visibleRef.value = true
     scopeRef = row
     itemInfoRef.value = { ...row }
@@ -82,7 +91,7 @@ export const useRootForm = () => {
     ]
     const { changedVal, changeHistory } = getChangeContext(checkKeys, itemInfoRef.value, scopeRef)
     if (Object.keys(changedVal).length) {
-      changedVal.toConfirm = true
+      changedVal.toConfirm = '是'
       Object.assign(scopeRef, changedVal)
       if (!scopeRef.history) {
         scopeRef.history = ''
