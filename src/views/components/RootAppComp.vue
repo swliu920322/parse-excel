@@ -108,12 +108,11 @@ const props = defineProps({
   }
 })
 
-const dataStore = useDataStore()
-const dataComputed = computed(() => dataStore.data[props.activeTab])
+
 
 const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRootForm()
 
-const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(dataComputed)
+const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props)
 
 const recordVisibleRef = ref(false)
 const recordDataRef = ref([])

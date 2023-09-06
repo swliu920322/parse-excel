@@ -1,13 +1,12 @@
 import { getDate } from '@/util/date'
-import { changeObj } from '@/util/request'
 import { reactive, ref, computed } from 'vue'
+import { useDataStore } from '@/stores/data.store'
 
 function getChangeContext(
   checkKeys = [],
   newObj: Record<string, any>,
   oldObj: Record<string, any>
 ) {
-  console.log({ newObj, oldObj })
   const changeHistory: any[] = []
   const changedVal = checkKeys.reduce((r, item) => {
     const { key, type } = item
@@ -30,14 +29,15 @@ function getChangeContext(
 
 // 找到变化的key和value
 
-export const useSearch = (data: any) => {
+export const useSearch = (props: any) => {
+  const dataStore = useDataStore()
   // 根据生效的条件进行过滤
   let innerSearchRef = ref({})
   const searchModel = reactive<Record<string, any>>({ toConfirm: false })
 
   const dataRef = computed(() => {
     const changedKeys = Object.keys(innerSearchRef.value)
-    return data.value.filter((i: Record<string, any>) => {
+    return dataStore.data[props.activeTab].filter((i: Record<string, any>) => {
         return changedKeys.reduce((r, key) => {
           const val = innerSearchRef.value[key]
           return r && i[key]?.indexOf(val) >= 0
@@ -84,6 +84,7 @@ export const useRootForm = () => {
     visibleRef.value = false
   }
 
+  const dataStore = useDataStore();
   function confirm() {
     const checkKeys = [
       { key: 'Target Due Date', type: 'date' },
@@ -99,15 +100,27 @@ export const useRootForm = () => {
       const prefix = scopeRef.history ? '\n' : ''
       scopeRef.history += `${prefix}${getDate()} 修改了 ${changeHistory.join('、')}`
 
-      changeObj({
-        sheetName: 'rootApp',
-        rowNumber: itemInfoRef.value.index,
+      let changeContext: any = {
         object: {
           ...changedVal,
           history: scopeRef.history,
           toConfirm: scopeRef.toConfirm
         }
-      })
+      }
+      if (scopeRef.selfOrder) {
+        changeContext = {
+          ...changeContext,
+          sheetName: 'integrated',
+          rowNumber: scopeRef.selfOrder
+        }
+      } else {
+        changeContext = {
+          ...changeContext,
+          sheetName: 'rootApp',
+          rowNumber: itemInfoRef.value.index
+        }
+      }
+      dataStore.changeData(changeContext)
     }
     visibleRef.value = false
   }
