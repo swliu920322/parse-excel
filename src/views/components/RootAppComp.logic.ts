@@ -1,5 +1,6 @@
-import { getDate } from '@/util/date'
-import { reactive, ref, computed } from 'vue'
+import { firstDateIsEarly, getDate } from '@/util/date'
+import { reactive, ref, computed, nextTick } from 'vue'
+import * as echarts from 'echarts'
 import { useDataStore } from '@/stores/data.store'
 
 function getChangeContext(
@@ -84,7 +85,8 @@ export const useRootForm = () => {
     visibleRef.value = false
   }
 
-  const dataStore = useDataStore();
+  const dataStore = useDataStore()
+
   function confirm() {
     const checkKeys = [
       { key: 'Target Due Date', type: 'date' },
@@ -132,5 +134,81 @@ export const useRootForm = () => {
     visibleRef,
     itemInfoRef,
     tableRef
+  }
+}
+
+const getChartOption = (data: { name: string; value: string }[]) => ({
+  title: {
+    text: '应用风险比例',
+    subtext: '风险数据',
+    left: 'center'
+  },
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    orient: 'vertical',
+    left: 'left'
+  },
+  series: [
+    {
+      name: '应用',
+      type: 'pie',
+      center: ['50%', '50%'],
+      radius: '50%',
+      data: data,
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+})
+
+export const useOpenChart = (props) => {
+  const chartState = ref(false)
+  const chartRef = ref()
+  const dataStore = useDataStore()
+
+  async function openChart() {
+    chartState.value = true
+    await nextTick()
+    const echartRef = echarts.init(chartRef.value)
+    const resizeObserver = new ResizeObserver(() => {
+      echartRef.resize()
+    })
+    resizeObserver.observe(document.body)
+    const data = dataStore.data[props.activeTab].map(i => {
+      let judge = i.children ? [i, i.children] : [i.par, i]
+      return {
+        ...i,
+        out: firstDateIsEarly(...judge, 'Target Due Date')
+      }
+    }).reduce((r, c) => {
+      r[c.out ? 0 : 1].value++
+      return r
+    }, [{ name: '风险', value: 0, itemStyle: { color: 'red' } }, {
+      name: '无风险',
+      value: 0,
+      itemStyle: { color: 'green' }
+    }])
+    console.log(data)
+    echartRef.setOption({
+      ...getChartOption(data)
+    })
+  }
+
+  function closeChart() {
+    chartState.value = false
+  }
+
+  return {
+    chartState,
+    openChart,
+    closeChart,
+    chartRef
   }
 }

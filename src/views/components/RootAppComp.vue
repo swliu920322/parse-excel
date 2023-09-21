@@ -30,6 +30,7 @@
       </div>
       <div>
         <el-button type='primary'>新增</el-button>
+        <el-button type='success' @click='openChart'>图表</el-button>
       </div>
     </template>
     <el-table-column prop='index' width='90' label='#' />
@@ -88,13 +89,16 @@
       <el-table-column label='记录' prop='record' />
     </el-table>
   </el-dialog>
+  <el-dialog v-model='chartState' title='图表' center>
+   <div ref='chartRef'  style='width: 300px; height: 300px'/>
+  </el-dialog>
 </template>
 
 <script setup lang='ts'>
 import Table from '@/components/Table.vue'
 import { ref } from 'vue'
 import { getDate, firstDateIsEarly } from '@/util/date'
-import { useRootForm, useSearch } from '@/views/components/RootAppComp.logic'
+import { useOpenChart, useRootForm, useSearch } from '@/views/components/RootAppComp.logic'
 
 const props = defineProps({
   activeTab: {
@@ -107,11 +111,12 @@ const props = defineProps({
   }
 })
 
-console.log(111)
 
 const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRootForm()
 
 const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props)
+
+const {chartState, chartRef, openChart, closeChart} = useOpenChart(props)
 
 const recordVisibleRef = ref(false)
 const recordDataRef = ref([])
