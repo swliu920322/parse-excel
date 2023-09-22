@@ -1,8 +1,8 @@
-export const routeFiles = import.meta.globEager('@/output/detail/*.js')
-const allRoutes = []
-const allRouteMap = {}
+export const routeFiles: any = import.meta.globEager('@/output/detail/*.js')
+const allRoutes: any[] = []
+const allRouteMap: Record<string, any> = {}
 
-function getFullPath(id) {
+function getFullPath(id: string) {
   return `/src/output/detail/${id}.js`
 }
 
@@ -18,11 +18,11 @@ enum ROLE {
   Developer = 'Developer'
 }
 
-function tranObj(val) {
+function tranObj(val: any) {
   const { information, dependencies, subscriptions } = val
   return {
     name: information.name,
-    children: dependencies.children.map((i) => ({
+    children: dependencies.children.map((i:any) => ({
       name: i.displayName,
       id: i.id
     })),
@@ -30,9 +30,9 @@ function tranObj(val) {
     description: information.description,
     category: 'Independent',
     state: information.lifecycle?.asString || '',
-    po: subscriptions.filter(i => i.role.includes(ROLE.PO))?.[0],
-    viewer: subscriptions.filter(i => i.role.includes(ROLE.IT))?.[0],
-    parent: dependencies.parent.map((i) => ({
+    po: subscriptions.filter((i: any) => i.role.includes(ROLE.PO))?.[0],
+    viewer: subscriptions.filter((i: any) => i.role.includes(ROLE.IT))?.[0],
+    parent: dependencies.parent.map((i: any) => ({
       name: i.displayName,
       id: i.id
     }))
@@ -45,12 +45,12 @@ for (const path in routeFiles) {
   allRouteMap[data.name] = data
   allRoutes.push({
     ...data,
-    id: path.split('/').pop().slice(0, -3)
+    id: path.split('/')?.pop()?.slice(0, -3)
   })
 }
-const rootApp = []
-const independentApp = []
-const others = []
+const rootApp: any[] = []
+const independentApp: any[] = []
+const others: any[] = []
 /*
 *  没有父类的有子类的算root
 *  没有父类没有子类的算independent
@@ -68,12 +68,12 @@ allRoutes.forEach(i => {
     others.push(i)
   }
 })
-const integrated = []
+const integrated: any[] = []
 
-function matchDependency(item) {
+function matchDependency(item: any) {
   if (item?.children?.length) {
-    item.children.forEach(ii => {
-      const detail = routeFiles[getFullPath(ii.id)]
+    item.children.forEach((ii: any) => {
+      const detail: any = routeFiles[getFullPath(ii.id)]
       const defaultVal = detail?.default
       if (defaultVal) {
         const res = {

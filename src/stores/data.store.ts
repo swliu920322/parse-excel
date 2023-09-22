@@ -2,15 +2,15 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { changeObj, fetchData } from '@/util/request'
 
-function dealChildrenRelation(data) {
+function dealChildrenRelation(data: any) {
   const { rootApp, integrated } = data
-  integrated.forEach((i, idx) => i.selfOrder = idx + 1)
-  rootApp.forEach((i, index: number) => {
+  integrated.forEach((i: any, idx: number) => i.selfOrder = idx + 1)
+  rootApp.forEach((i: any, index: number) => {
     const { 'Independent App': parName } = i
     const order = index + 1
     // 更新的时候，更新父类，同时修改子类中的rootTime, 修改rootApp的数据
     // 更新子类，直接更新子类的事件就行, 修改integrated的数据
-    i.children = integrated.filter(ii => ii['Root-App'] === parName).map((ii, idx: number) => {
+    i.children = integrated.filter((ii: any) => ii['Root-App'] === parName).map((ii:any, idx: number) => {
       const orderInner = idx + 1
       return {
         ...ii,

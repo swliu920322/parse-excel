@@ -20,10 +20,10 @@ const props = defineProps({
   }
 })
 
-function changePage(current) {
+function changePage(current: number) {
   emit('pageChange', { current })
 }
-function sizeChange(pageSize) {
+function sizeChange(pageSize: number) {
   emit('pageChange', { pageSize })
 }
 </script>

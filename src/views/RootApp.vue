@@ -17,9 +17,7 @@ import { rootApp } from '@/util'
 import { onMounted } from 'vue'
 import Table from '@/components/Table.vue'
 
-onMounted(() => {
-  console.log(rootApp)
-})
+
 </script>
 
 <style scoped>

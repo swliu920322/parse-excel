@@ -12,7 +12,7 @@ export const fetchData = (fileName = 'test') => {
       console.error('发生错误:', error)
     })
 }
-export const changeObj = ({ rowNumber, object, sheetName }) => {
+export const changeObj = ({ rowNumber, object, sheetName }: any) => {
   const requestOptions = {
     method: 'POST',               // 设置请求方法为POST
     headers: {
@@ -33,7 +33,7 @@ export const changeObj = ({ rowNumber, object, sheetName }) => {
       console.error('发生错误:', error)
     })
 }
-export const changeData = (data, sheetName) => {
+export const changeData = (data: any, sheetName: string) => {
 
   const requestOptions = {
     method: 'POST',               // 设置请求方法为POST

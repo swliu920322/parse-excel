@@ -3,15 +3,14 @@ import { reactive, ref, computed, nextTick } from 'vue'
 import * as echarts from 'echarts'
 import { useDataStore } from '@/stores/data.store'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import type { Action } from 'element-plus'
 
 function getChangeContext(
-  checkKeys = [],
+  checkKeys:any[] = [],
   newObj: Record<string, any>,
   oldObj: Record<string, any>
 ) {
   const changeHistory: any[] = []
-  const changedVal = checkKeys.reduce((r, item) => {
+  const changedVal: Record<string, any> = checkKeys.reduce((r, item) => {
     const { key, type } = item
     const oldVal = oldObj[key]
     let newVal = newObj[key]
@@ -35,15 +34,15 @@ function getChangeContext(
 export const useSearch = (props: any) => {
   const dataStore = useDataStore()
   // 根据生效的条件进行过滤
-  let innerSearchRef = ref({})
+  let innerSearchRef = ref<any>({})
   const searchModel = reactive<Record<string, any>>({ toConfirm: false })
 
   const dataRef = computed(() => {
     const changedKeys = Object.keys(innerSearchRef.value)
     return dataStore.data[props.activeTab].filter((i: Record<string, any>) => {
         return changedKeys.reduce((r, key) => {
-          const val = innerSearchRef.value[key]
-          return r && i[key]?.indexOf(val) >= 0
+          const val = innerSearchRef.value?.[key]
+          return r && i?.[key]?.indexOf(val) >= 0
         }, true)
       }
     )
@@ -72,10 +71,10 @@ export const useSearch = (props: any) => {
 
 export const useRootForm = () => {
   const visibleRef = ref<boolean>(false)
-  const tableRef = ref()
+  const tableRef = ref<any>()
   // 临时存储，旧数据
-  let scopeRef = {}
-  const itemInfoRef = ref({})
+  let scopeRef: Record<string, any> = {}
+  const itemInfoRef = ref<any>({})
 
   function openEdit(row: any) {
     visibleRef.value = true
@@ -233,7 +232,7 @@ const getChartOption = (data: { name: string; value: string }[]) => ({
     }
   ]
 })
-const getOptions2 = (data) => {
+const getOptions2 = (data: any[]) => {
   return {
     title: {
       text: '风险与信息完整度统计',
@@ -245,7 +244,7 @@ const getOptions2 = (data) => {
     },
     xAxis: {
       type: 'category',
-      data: data.map(i => i.name)
+      data: data.map((i: any) => i.name)
     },
     yAxis: {
       type: 'value'
@@ -256,14 +255,14 @@ const getOptions2 = (data) => {
           show: true,
           position: 'inside'
         },
-        data: data.map(i => i.value),
+        data: data.map((i:any) => i.value),
         type: 'bar',
-        itemStyle: data.map(i => i.itemStyle)
+        itemStyle: data.map((i: any) => i.itemStyle)
       }
     ]
   }
 }
-export const useOpenChart = (props) => {
+export const useOpenChart = (props: any) => {
   const chartState = ref(false)
   const chartRef = ref()
   const chartRef2 = ref()
@@ -280,10 +279,10 @@ export const useOpenChart = (props) => {
     })
     resizeObserver.observe(document.body)
     const data = dataStore.data[props.activeTab].map(i => {
-      let judge = i.children ? [i, i.children] : [i.par, i]
+      let judge: any[] = i.children ? [i, i.children] : [i.par, i]
       return {
         ...i,
-        out: firstDateIsEarly(...judge, 'Target Due Date')
+        out: firstDateIsEarly(judge[0], judge[1], 'Target Due Date')
       }
     })
     const data1 = data.reduce((r, c) => {
@@ -296,7 +295,7 @@ export const useOpenChart = (props) => {
 
 
     const data2 = data.reduce((r, c) => {
-      if (c['Target Due Date'] && c.children.every(i => i['Target Due Date'])) {
+      if (c['Target Due Date'] && c.children.every((i:any) => i['Target Due Date'])) {
         r[c.out ? 0 : 1].value++
       } else {
         r[2].value++

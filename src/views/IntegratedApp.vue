@@ -31,35 +31,31 @@
 </template>
 
 <script setup lang='ts'>
-import { integrated, allRoutes } from '@/util'
-import { onMounted, ref } from 'vue'
+import { integrated  } from '@/util'
+import { ref } from 'vue'
 import Table from '@/components/Table.vue'
-import { DataDeal, exportExcel } from '@/util/excel'
-
-onMounted(() => {
-  console.log(integrated)
-})
+import {  exportExcel } from '@/util/excel'
 
 
-let tempValueRef = ref(undefined)
+let tempValueRef = ref<Record<string, any>>({})
 
 const editIndexRef = ref('')
 
 function toCancel() {
   if (tempValueRef.value) {
-    tempValueRef.value = undefined
+    tempValueRef.value = {  }
   }
   editIndexRef.value = ''
 }
 
-function save(scope) {
-  Object.entries(tempValueRef.value).forEach(([key, value]) => {
+function save(scope: any) {
+  Object.entries(tempValueRef.value || {}).forEach(([key, value]) => {
     scope.row[key] = value
   })
   toCancel()
 }
 
-function toEdit(scope) {
+function toEdit(scope: any) {
   toCancel()
   const { $index, row } = scope
   tempValueRef.value = { ...row }

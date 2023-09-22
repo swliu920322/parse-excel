@@ -76,5 +76,4 @@ function exportExcelTotal(infos: IInfo[] = [], fileName = '') {
     XLSX.utils.book_append_sheet(wb, ws, i.sheetName)
   })
   XLSX.writeFileXLSX(wb, fileName)
-  return this
 }

@@ -102,7 +102,7 @@
       <el-table-column type='index' label='#' width='50' />
       <el-table-column label='记录' prop='record' />
     </el-table>
-    <template #footer v-if='itemInfoRef.toConfirm === "是"'>
+    <template #footer v-if='itemInfoRef?.toConfirm === "是"'>
       <span class='dialog-footer'>
         <el-button type='primary' @click='confirmUpdate'>确认变更</el-button>
       </span>
@@ -144,9 +144,9 @@ const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props)
 const { chartState, chartRef, chartRef2, openChart, closeChart } = useOpenChart(props)
 
 
-function getColor(row) {
-  let judge = row.children ? [row, row.children] : [row.par, row]
-  return firstDateIsEarly(...judge, 'Target Due Date') ? 'red' : 'black'
+function getColor(row: any) {
+  let judge: any[] = row.children ? [row, row.children] : [row.par, row]
+  return firstDateIsEarly(judge[0], judge[1], 'Target Due Date') ? 'red' : 'black'
 }
 </script>
 
