@@ -155,8 +155,17 @@ const getChartOption = (data: { name: string; value: string }[]) => ({
       name: '应用',
       type: 'pie',
       center: ['50%', '50%'],
-      radius: '50%',
+      radius: ['20%', '70%'],
       data: data,
+      label: {
+        show: true,
+        position: 'inside'
+      },
+      itemStyle: {
+        borderRadius: 10,
+        borderColor: '#fff',
+        borderWidth: 2
+      },
       emphasis: {
         itemStyle: {
           shadowBlur: 10,
@@ -167,18 +176,50 @@ const getChartOption = (data: { name: string; value: string }[]) => ({
     }
   ]
 })
-
+const getOptions2 = (data) => {
+  return {
+    title: {
+      text: '风险与信息完整度统计',
+      subtext: '风险数据',
+      center: 'center'
+    },
+    tooltip: {
+      trigger: 'item'
+    },
+    xAxis: {
+      type: 'category',
+      data: data.map(i => i.name)
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [
+      {
+        label: {
+          show: true,
+          position: 'inside'
+        },
+        data: data.map(i => i.value),
+        type: 'bar',
+        itemStyle: data.map(i => i.itemStyle)
+      }
+    ]
+  }
+}
 export const useOpenChart = (props) => {
   const chartState = ref(false)
   const chartRef = ref()
+  const chartRef2 = ref()
   const dataStore = useDataStore()
 
   async function openChart() {
     chartState.value = true
     await nextTick()
     const echartRef = echarts.init(chartRef.value)
+    const echartRef2 = echarts.init(chartRef2.value)
     const resizeObserver = new ResizeObserver(() => {
       echartRef.resize()
+      echartRef2.resize()
     })
     resizeObserver.observe(document.body)
     const data = dataStore.data[props.activeTab].map(i => {
@@ -187,18 +228,29 @@ export const useOpenChart = (props) => {
         ...i,
         out: firstDateIsEarly(...judge, 'Target Due Date')
       }
-    }).reduce((r, c) => {
+    })
+    const data1 = data.reduce((r, c) => {
       r[c.out ? 0 : 1].value++
       return r
-    }, [{ name: '风险', value: 0, itemStyle: { color: 'red' } }, {
-      name: '无风险',
-      value: 0,
-      itemStyle: { color: 'green' }
-    }])
-    console.log(data)
-    echartRef.setOption({
-      ...getChartOption(data)
-    })
+    }, [
+      { name: '风险', value: 0, itemStyle: { color: 'red' } },
+      { name: '无风险', value: 0, itemStyle: { color: '#91CC75' } }
+    ])
+    echartRef.setOption(getChartOption(data1))
+
+    const data2 = data.reduce((r, c) => {
+      if(c['Target Due Date'] && c.children.every(i => i['Target Due Date'])) {
+        r[c.out ? 0 : 1].value++
+      } else {
+        r[2].value++
+      }
+      return r
+    }, [
+      { name: '有日期有风险', value: 0, itemStyle: { color: 'red' } },
+      { name: '有日期无风险', value: 0, itemStyle: { color: '#91CC75' } },
+      { name: '未设置日期', value: 0 }
+    ])
+    echartRef2.setOption(getOptions2(data2))
   }
 
   function closeChart() {
@@ -209,6 +261,7 @@ export const useOpenChart = (props) => {
     chartState,
     openChart,
     closeChart,
-    chartRef
+    chartRef,
+    chartRef2
   }
 }

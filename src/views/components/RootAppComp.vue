@@ -20,7 +20,7 @@
             />
           </el-form-item>
           <el-form-item prop='toConfirm' label='待确认'>
-            <el-checkbox true-label='是' false-label='否' v-model='searchModel.toConfirm'/>
+            <el-checkbox true-label='是' false-label='否' v-model='searchModel.toConfirm' />
           </el-form-item>
           <el-form-item>
             <el-button @click='reset'>重置</el-button>
@@ -90,7 +90,10 @@
     </el-table>
   </el-dialog>
   <el-dialog v-model='chartState' title='图表' center>
-   <div ref='chartRef'  style='width: 300px; height: 300px'/>
+    <div class='flex'>
+      <div ref='chartRef' style='width: 300px; height: 300px' />
+      <div ref='chartRef2' style='width: 400px; height: 300px' />
+    </div>
   </el-dialog>
 </template>
 
@@ -116,7 +119,7 @@ const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRoot
 
 const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props)
 
-const {chartState, chartRef, openChart, closeChart} = useOpenChart(props)
+const { chartState, chartRef, chartRef2, openChart, closeChart } = useOpenChart(props)
 
 const recordVisibleRef = ref(false)
 const recordDataRef = ref([])

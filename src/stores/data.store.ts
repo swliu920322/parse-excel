@@ -41,6 +41,7 @@ export const useDataStore = defineStore('data', () => {
       ...dataRef.value[sheetName][rowNumber],
       ...object
     }
+    dealChildrenRelation(dataRef.value)
     changeObj(data)
   }
 
