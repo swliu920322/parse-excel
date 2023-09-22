@@ -236,7 +236,7 @@ export const useOpenChart = (props) => {
       { name: '风险', value: 0, itemStyle: { color: 'red' } },
       { name: '无风险', value: 0, itemStyle: { color: '#91CC75' } }
     ])
-    echartRef.setOption(getChartOption(data1))
+
 
     const data2 = data.reduce((r, c) => {
       if(c['Target Due Date'] && c.children.every(i => i['Target Due Date'])) {
@@ -250,6 +250,7 @@ export const useOpenChart = (props) => {
       { name: '有日期无风险', value: 0, itemStyle: { color: '#91CC75' } },
       { name: '未设置日期', value: 0 }
     ])
+    echartRef.setOption(getChartOption(data2))
     echartRef2.setOption(getOptions2(data2))
   }
 
