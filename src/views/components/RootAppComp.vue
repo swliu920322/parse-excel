@@ -29,7 +29,7 @@
         </el-form>
       </div>
       <div>
-        <el-button type='primary'>新增</el-button>
+        <el-button type='primary' disabled>新增(尚未开发)</el-button>
         <el-button type='success' @click='openChart'>图表</el-button>
       </div>
     </template>
@@ -98,7 +98,7 @@
     </template>
   </el-dialog>
   <el-dialog v-model='recordVisibleRef' title='变更记录' center>
-    <el-table :data='recordDataRef' height='300'>
+    <el-table :data='recordDataRef' height='440'>
       <el-table-column type='index' label='#' width='50' />
       <el-table-column label='记录' prop='record' />
     </el-table>
