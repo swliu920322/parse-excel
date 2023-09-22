@@ -37,8 +37,8 @@ export const useDataStore = defineStore('data', () => {
 
   function changeData(data: any) {
     const { sheetName, rowNumber, object } = data
-    dataRef.value[sheetName][rowNumber] = {
-      ...dataRef.value[sheetName][rowNumber],
+    dataRef.value[sheetName][rowNumber -1] = {
+      ...dataRef.value[sheetName][rowNumber -1],
       ...object
     }
     dealChildrenRelation(dataRef.value)

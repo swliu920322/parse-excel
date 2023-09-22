@@ -48,7 +48,13 @@
       </template>
     </el-table-column>
     <el-table-column prop='Risk Description' label='Risk Description' />
-    <el-table-column prop='toConfirm' label='待确认' width='88' />
+    <el-table-column prop='toConfirm' label='待确认' width='88'>
+      <template #default='{ row }'>
+        <span :style='{ color: row.toConfirm === "是"? "red" : "green" }'>
+          {{ row['toConfirm'] }}
+        </span>
+      </template>
+    </el-table-column>
     <el-table-column label='操作' width='180'>
       <template #default='scope'>
         <el-button link type='primary' @click='openEdit(scope.row)'>修改</el-button>
@@ -75,6 +81,14 @@
           placeholder='请选择日期'
         />
       </el-form-item>
+      <el-form-item label='Risk Description' prop='Risk Description' class='w-full'>
+        <el-input
+          type='textarea'
+          style='width: 100%'
+          v-model="itemInfoRef['Risk Description']"
+          placeholder='请输入风险描述'
+        />
+      </el-form-item>
     </el-form>
     <template #footer>
       <span class='dialog-footer'>
@@ -84,10 +98,15 @@
     </template>
   </el-dialog>
   <el-dialog v-model='recordVisibleRef' title='变更记录' center>
-    <el-table :data='recordDataRef'>
+    <el-table :data='recordDataRef' height='300'>
       <el-table-column type='index' label='#' width='50' />
       <el-table-column label='记录' prop='record' />
     </el-table>
+    <template #footer v-if='itemInfoRef.toConfirm === "是"'>
+      <span class='dialog-footer'>
+        <el-button type='primary' @click='confirmUpdate'>确认变更</el-button>
+      </span>
+    </template>
   </el-dialog>
   <el-dialog v-model='chartState' title='图表' center>
     <div class='flex'>
@@ -99,7 +118,6 @@
 
 <script setup lang='ts'>
 import Table from '@/components/Table.vue'
-import { ref } from 'vue'
 import { getDate, firstDateIsEarly } from '@/util/date'
 import { useOpenChart, useRootForm, useSearch } from '@/views/components/RootAppComp.logic'
 
@@ -115,19 +133,16 @@ const props = defineProps({
 })
 
 
-const { openEdit, confirm, tableRef, cancel, visibleRef, itemInfoRef } = useRootForm()
+const {
+  openEdit, confirm, confirmUpdate, tableRef, cancel, visibleRef, itemInfoRef, recordVisibleRef,
+  recordDataRef,
+  openRecord
+} = useRootForm()
 
 const { dataRef, formRef, searchModel, reset, toSearch } = useSearch(props)
 
 const { chartState, chartRef, chartRef2, openChart, closeChart } = useOpenChart(props)
 
-const recordVisibleRef = ref(false)
-const recordDataRef = ref([])
-
-function openRecord(row: any) {
-  recordDataRef.value = row.history?.split('\n').map((i: any) => ({ record: i }))
-  recordVisibleRef.value = true
-}
 
 function getColor(row) {
   let judge = row.children ? [row, row.children] : [row.par, row]

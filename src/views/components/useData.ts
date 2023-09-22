@@ -8,7 +8,7 @@ export const useData = () => {
 
   onMounted(async () => {
     tabListRef.value = Object.keys(dataStore.data).map((i) => i)
-    activeTabRef.value = tabListRef.value[1]
+    activeTabRef.value = tabListRef.value[0]
   })
   return {
     activeTabRef,

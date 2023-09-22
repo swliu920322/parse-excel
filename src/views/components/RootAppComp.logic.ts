@@ -2,6 +2,8 @@ import { firstDateIsEarly, getDate } from '@/util/date'
 import { reactive, ref, computed, nextTick } from 'vue'
 import * as echarts from 'echarts'
 import { useDataStore } from '@/stores/data.store'
+import { ElMessage, ElMessageBox } from 'element-plus'
+import type { Action } from 'element-plus'
 
 function getChangeContext(
   checkKeys = [],
@@ -87,10 +89,47 @@ export const useRootForm = () => {
 
   const dataStore = useDataStore()
 
+  function confirmUpdate() {
+    ElMessageBox.alert('是否确认该条的变更', '确认变更', {
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
+      center: true
+    }).then(() => {
+      let changeContext: any = {
+        object: {
+          history: scopeRef.history + `\n${getDate()} 确认了 记录变更` ,
+          toConfirm: '否'
+        }
+      }
+      if (scopeRef.selfOrder) {
+        changeContext = {
+          ...changeContext,
+          sheetName: 'integrated',
+          rowNumber: scopeRef.selfOrder
+        }
+      } else {
+        changeContext = {
+          ...changeContext,
+          sheetName: 'rootApp',
+          rowNumber: itemInfoRef.value.index
+        }
+      }
+      dataStore.changeData(changeContext)
+      closeRecord()
+      ElMessage({
+        type: 'success',
+        message: '确认变更成功'
+      })
+    })
+      .catch(() => {
+      })
+  }
+
   function confirm() {
     const checkKeys = [
       { key: 'Target Due Date', type: 'date' },
-      { key: 'Status', type: 'string' }
+      { key: 'Status', type: 'string' },
+      { key: 'Risk Description', type: 'string' }
     ]
     const { changedVal, changeHistory } = getChangeContext(checkKeys, itemInfoRef.value, scopeRef)
     if (Object.keys(changedVal).length) {
@@ -127,13 +166,30 @@ export const useRootForm = () => {
     visibleRef.value = false
   }
 
+  const recordVisibleRef = ref(false)
+  const recordDataRef = ref([])
+
+  function closeRecord() {
+    recordVisibleRef.value = false
+  }
+  function openRecord(row: any) {
+    scopeRef = row
+    itemInfoRef.value = { ...row }
+    recordDataRef.value = row.history?.split('\n').map((i: any) => ({ record: i })).reverse()
+    recordVisibleRef.value = true
+  }
+
   return {
+    confirmUpdate,
     confirm,
     cancel,
     openEdit,
     visibleRef,
     itemInfoRef,
-    tableRef
+    tableRef,
+    recordVisibleRef,
+    recordDataRef,
+    openRecord
   }
 }
 
@@ -159,7 +215,8 @@ const getChartOption = (data: { name: string; value: string }[]) => ({
       data: data,
       label: {
         show: true,
-        position: 'inside'
+        position: 'inside',
+        formatter: '{d}%'
       },
       itemStyle: {
         borderRadius: 10,
@@ -239,7 +296,7 @@ export const useOpenChart = (props) => {
 
 
     const data2 = data.reduce((r, c) => {
-      if(c['Target Due Date'] && c.children.every(i => i['Target Due Date'])) {
+      if (c['Target Due Date'] && c.children.every(i => i['Target Due Date'])) {
         r[c.out ? 0 : 1].value++
       } else {
         r[2].value++
